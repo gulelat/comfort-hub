@@ -7,6 +7,6 @@
  *
  * @author Dorothy
  */
-class Log_in {
+public class ControllerAddHotEmp {
     
 }

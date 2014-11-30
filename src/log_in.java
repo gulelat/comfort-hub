@@ -22,7 +22,7 @@ public class log_in extends javax.swing.JFrame {
      * Creates new form log_in
      */
     public log_in() {
-        getContentPane().setBackground(Color.RED);
+        getContentPane().setBackground(Color.BLUE);
         initComponents();
     }
     
@@ -167,7 +167,7 @@ public class log_in extends javax.swing.JFrame {
     
       java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Log_in().setVisible(true);
+                new log_in().setVisible(true);
             }
         });
         }

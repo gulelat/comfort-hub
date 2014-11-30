@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="menubar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="ADDEMPMENU">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Employees"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="ADDING">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Employee"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="EDITEMPMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edit Employee Details"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="DELETEEMPMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete Employee"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="LISTEMPMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="List Employees"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="SUITEMENU">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Rooms"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="ADDROOMMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Room"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="DELETEROOMMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete Room"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="LISTROOMMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="List Rooms"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="RESMENU">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reservations"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="ADDBOOKINGMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add Booking"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="EDITBOOKINGMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edit Bookings"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="DELETEBOOKINGMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete Booking"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="LISTBOOKINGMENU">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="List Bookings"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menubar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="MODIFYEMP" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="ADDEMP" alignment="1" max="32767" attributes="0"/>
+                  <Component id="DELETEMP" alignment="1" max="32767" attributes="0"/>
+                  <Component id="LISTEMP" alignment="1" max="32767" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="DELETESUITES" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="LISTSUITE" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="ADDSUITES" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="EXPORT" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="MODIFYRES" max="32767" attributes="0"/>
+                                  <Component id="ADDRES" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="DELETERES" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="LISTRES" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="SEARCH" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="IMPORT" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+              <Component id="LISTALL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ADDEMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ADDSUITES" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ADDRES" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="MODIFYEMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="MODIFYRES" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="DELETESUITES" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="DELETEMP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="DELETERES" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LISTSUITE" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LISTEMP" min="-2" max="-2" attributes="0"/>
+                          <Component id="LISTRES" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="EXPORT" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="IMPORT" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LISTALL" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="SEARCH" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EMPLOYEES"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SUITES"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RESERVATIONS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ADDEMP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ADD"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="MODIFYEMP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MODIFY"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="DELETEMP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DELETE"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="LISTEMP">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LIST"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ADDSUITES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ADD"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="DELETESUITES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DELETE"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="LISTSUITE">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LIST"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ADDRES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ADD"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="MODIFYRES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MODIFY"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="DELETERES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DELETE"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="LISTRES">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LIST"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="IMPORT">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="IMPORT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="EXPORT">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EXPORT"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="SEARCH">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SEARCH"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="LISTALL">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LIST RESERVATIONS"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

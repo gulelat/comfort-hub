@@ -21,12 +21,12 @@ public class ControllerLog_in {
     Connection conn=null;
     String querry;
     Statement st=null;
-    public Log_in login;
+    public log_in login;
     private ActionListener actionListener;  
     
     
      public ControllerLog_in( ){
-        login = new Log_in();
+        login = new log_in();
         login.setVisible(true);
                           
     }
@@ -48,7 +48,7 @@ public class ControllerLog_in {
         else {
 
             do {
-                    ControllerHomePage homepage= new ControllerHomePage();  
+                    HomePageController homepage= new HomePageController();  
                     homepage.control();
                     login.setVisible(false);
             } while (rs.next());
@@ -67,7 +67,7 @@ public class ControllerLog_in {
               public void actionPerformed(ActionEvent actionEvent) {  
                   if(actionEvent.getSource()==login.getLoginButton()){
                       if ((login.getPasswordField().getText().equals("visitor"))&&(login.getUsernameField().getText().equals("visitor"))){
-                      ControllerHomePage homepage= new ControllerHomePage();  
+                      HomePageController homepage= new HomePageController();  
                       homepage.control();
                       login.setVisible(false);
                       }
