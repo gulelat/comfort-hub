@@ -54,7 +54,7 @@ public class SearchEmployee extends javax.swing.JFrame {
         try {
             
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/jetwingdb?user=root&password=");
+            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
         } catch (Exception e) {
             System.out.println(e);
             System.exit(0);
@@ -137,7 +137,7 @@ return dm;
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("EMPLOYEE");
 
-        CLOSEButton.setBackground(new java.awt.Color(0, 102, 204));
+        CLOSEButton.setBackground(new java.awt.Color(153, 102, 0));
         CLOSEButton.setForeground(new java.awt.Color(102, 0, 51));
         CLOSEButton.setText("CLOSE");
         CLOSEButton.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +146,7 @@ return dm;
             }
         });
 
+        searchCombo.setBackground(new java.awt.Color(153, 102, 0));
         searchCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchComboActionPerformed(evt);
@@ -158,7 +159,7 @@ return dm;
             }
         });
 
-        SearchButtonEmployee.setBackground(new java.awt.Color(0, 102, 204));
+        SearchButtonEmployee.setBackground(new java.awt.Color(153, 102, 0));
         SearchButtonEmployee.setForeground(new java.awt.Color(102, 0, 102));
         SearchButtonEmployee.setText("SEARCH");
         SearchButtonEmployee.addActionListener(new java.awt.event.ActionListener() {

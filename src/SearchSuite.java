@@ -55,7 +55,7 @@ public class SearchSuite extends javax.swing.JFrame {
         try {
             
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub_db?user=root&password=");
+            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
         } catch (Exception e) {
             System.out.println(e);
             System.exit(0);
@@ -92,13 +92,14 @@ public class SearchSuite extends javax.swing.JFrame {
         suiteTable.setModel(dm);
         jScrollPane1.setViewportView(suiteTable);
 
+        searchCombo.setBackground(new java.awt.Color(153, 102, 0));
         searchCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchComboActionPerformed(evt);
             }
         });
 
-        CLOSEButton.setBackground(new java.awt.Color(0, 51, 204));
+        CLOSEButton.setBackground(new java.awt.Color(153, 102, 0));
         CLOSEButton.setForeground(new java.awt.Color(0, 51, 51));
         CLOSEButton.setText("CLOSE");
         CLOSEButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +116,7 @@ public class SearchSuite extends javax.swing.JFrame {
 
         msgLabel.setText("jLabel6");
 
-        SearchButtonSuite.setBackground(new java.awt.Color(0, 51, 204));
+        SearchButtonSuite.setBackground(new java.awt.Color(153, 102, 0));
         SearchButtonSuite.setText("SEARCH");
         SearchButtonSuite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +127,7 @@ public class SearchSuite extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Suites");
 
-        SEARCHButtonReservation.setBackground(new java.awt.Color(0, 51, 204));
+        SEARCHButtonReservation.setBackground(new java.awt.Color(153, 102, 0));
         SEARCHButtonReservation.setText("SEARCH USING RESERVATION");
         SEARCHButtonReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +135,7 @@ public class SearchSuite extends javax.swing.JFrame {
             }
         });
 
-        SEARCHButtonEmployee.setBackground(new java.awt.Color(0, 51, 204));
+        SEARCHButtonEmployee.setBackground(new java.awt.Color(153, 102, 0));
         SEARCHButtonEmployee.setText("SEARCH USING  EMPLOYEE");
         SEARCHButtonEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -40,10 +40,11 @@ public class SearchReservationsController {
         
           try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
+                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
                    // System.out.println("passes");
         }catch (Exception e){
             System.out.println("exception in control "+e.toString());
+            System.out.println(" NO PASSWORD RES");
         }
           
     actionListener= new ActionListener() {
@@ -78,10 +79,11 @@ public class SearchReservationsController {
         
           try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
+                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
                     //System.out.println("passes");
         }catch (Exception e){
             System.out.println("exception in control "+e.toString());
+            System.out.println(" NO PASSWORD RES");
         }
         
         

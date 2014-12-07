@@ -32,6 +32,7 @@ public class HomePageController {
     
     
     
+    
     public HomePageController(){
         home = new HomePage();
         home.setVisible(true);

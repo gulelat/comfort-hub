@@ -81,14 +81,24 @@ public class ModHotEmp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(153, 102, 0));
+        jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("Enter ID to search");
 
+        jLabel2.setBackground(new java.awt.Color(153, 102, 0));
+        jLabel2.setForeground(new java.awt.Color(153, 102, 0));
         jLabel2.setText("Emp ID");
 
+        jLabel3.setBackground(new java.awt.Color(153, 102, 0));
+        jLabel3.setForeground(new java.awt.Color(153, 102, 0));
         jLabel3.setText("Name");
 
+        jLabel4.setBackground(new java.awt.Color(153, 102, 0));
+        jLabel4.setForeground(new java.awt.Color(153, 102, 0));
         jLabel4.setText("Email");
 
+        jLabel5.setBackground(new java.awt.Color(153, 102, 0));
+        jLabel5.setForeground(new java.awt.Color(153, 102, 0));
         jLabel5.setText("Password");
 
         search.setText("SEARCH");
@@ -110,20 +120,19 @@ public class ModHotEmp extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(56, 56, 56)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                                        .addComponent(name)
-                                        .addComponent(ID)
-                                        .addComponent(takeId))))
+                                    .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                                    .addComponent(name)
+                                    .addComponent(ID)
+                                    .addComponent(takeId)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(72, 72, 72)
                                 .addComponent(save)

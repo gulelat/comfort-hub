@@ -17,8 +17,7 @@ public class ListSuites extends javax.swing.JFrame {
      * An array of string to store Flight Name, From, Destination, Price, 
      * Capacity, Departure Time, Arrival Time"
      */
-    String[] columns = {"Flight Name"," From","Destination", "Price","Capacity","Departure Time"
-    ,"Arrival Time"};
+    String[] columns = {"Suite Name"," Number", "Price","Type","Availability"};
     DefaultTableModel table= new DefaultTableModel(columns,0);
     
     

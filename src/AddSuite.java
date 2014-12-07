@@ -2,6 +2,7 @@
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /*
@@ -46,7 +47,7 @@ public class AddSuite extends javax.swing.JFrame {
     public JTextField getNumber(){
     return number;
     } 
-    public JCheckBox getAvail(){
+    public JComboBox getAvail(){
     return no;
     } 
    
@@ -72,30 +73,35 @@ public class AddSuite extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         save = new javax.swing.JButton();
         close = new javax.swing.JButton();
-        no = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
         number = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        no = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        name.setForeground(new java.awt.Color(153, 102, 0));
         name.setText("NAME");
 
+        jLabel2.setForeground(new java.awt.Color(153, 102, 0));
         jLabel2.setText("PRICE");
 
+        jLabel3.setForeground(new java.awt.Color(153, 102, 0));
         jLabel3.setText("TYPE");
 
+        jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("AVAILABILITY");
 
         save.setText("SAVE");
 
         close.setText("CLOSE");
 
-        no.setText("Tick for Booked");
-
+        jLabel4.setForeground(new java.awt.Color(153, 102, 0));
         jLabel4.setText("No #");
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Desktop\\SUIT.jpg")); // NOI18N
+
+        no.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "YES", "NO" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,15 +120,14 @@ public class AddSuite extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jLabel4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(close)
-                    .addComponent(no)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(number, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Sname, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
-                        .addComponent(Sprice)
-                        .addComponent(Stype)))
-                .addGap(27, 27, 27))
+                    .addComponent(number)
+                    .addComponent(Sname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                    .addComponent(Sprice, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Stype, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(no, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(102, Short.MAX_VALUE)
                 .addComponent(jLabel6)
@@ -150,7 +155,7 @@ public class AddSuite extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(no))
+                    .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -209,7 +214,7 @@ public class AddSuite extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel name;
-    private javax.swing.JCheckBox no;
+    private javax.swing.JComboBox no;
     private javax.swing.JTextField number;
     private javax.swing.JButton save;
     // End of variables declaration//GEN-END:variables

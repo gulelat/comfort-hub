@@ -85,11 +85,11 @@ public class ControllerAddRes {
         
     PreparedStatement p =conn.prepareStatement(querry);
     p.setString(1, EnterOrder.getPName().getText());
-    p.setString(2, EnterOrder.getPNation().getText());
-    p.setString(3, EnterOrder.getPrice().getText());
+    p.setString(2, (EnterOrder.getRnum().getSelectedItem()).toString());
+    p.setString(3, EnterOrder.getPNation().getText());
     p.setString(4, EnterOrder.getPhoneNo().getText());
-    p.setString(5, (EnterOrder.getRnum().getSelectedItem()).toString());
-    p.setString(6, EnterOrder.getRoomType().getText());
+    p.setString(5, EnterOrder.getRoomType().getText());
+    p.setString(6, EnterOrder.getPrice().getText());
     p.setString(7, EnterOrder.getTimeIn().getText());
     p.setString(8, EnterOrder.getTimeOut().getText());
    

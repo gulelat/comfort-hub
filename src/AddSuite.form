@@ -39,17 +39,15 @@
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="close" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="no" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="number" alignment="0" max="32767" attributes="0"/>
-                      <Component id="Sname" pref="71" max="32767" attributes="0"/>
-                      <Component id="Sprice" alignment="1" max="32767" attributes="0"/>
-                      <Component id="Stype" alignment="1" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="number" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Sname" alignment="1" pref="71" max="32767" attributes="0"/>
+                  <Component id="Sprice" alignment="1" max="32767" attributes="0"/>
+                  <Component id="Stype" alignment="1" max="32767" attributes="0"/>
+                  <Component id="no" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="102" max="32767" attributes="0"/>
@@ -101,16 +99,25 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="name">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="NAME"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="PRICE"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="TYPE"/>
       </Properties>
     </Component>
@@ -122,6 +129,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="AVAILABILITY"/>
       </Properties>
     </Component>
@@ -135,13 +145,11 @@
         <Property name="text" type="java.lang.String" value="CLOSE"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="no">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tick for Booked"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="No #"/>
       </Properties>
     </Component>
@@ -151,6 +159,16 @@
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="2" name="C:\Users\Dorothy\Desktop\SUIT.jpg"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="no">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="YES"/>
+            <StringItem index="1" value="NO"/>
+          </StringArray>
         </Property>
       </Properties>
     </Component>

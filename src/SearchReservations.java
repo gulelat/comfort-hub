@@ -58,7 +58,7 @@ public class SearchReservations extends javax.swing.JFrame {
         try {
             
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub_db?user=root&password=root");
+            conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
         } catch (Exception e) {
             System.out.println(e);
             System.exit(0);
@@ -94,7 +94,7 @@ public class SearchReservations extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("RESERVATION");
 
-        CLOSEButton.setBackground(new java.awt.Color(0, 102, 204));
+        CLOSEButton.setBackground(new java.awt.Color(153, 102, 0));
         CLOSEButton.setForeground(new java.awt.Color(51, 51, 0));
         CLOSEButton.setText("CLOSE");
         CLOSEButton.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class SearchReservations extends javax.swing.JFrame {
         reservationTable.setModel(dm);
         jScrollPane1.setViewportView(reservationTable);
 
-        SearchButtonReservation.setBackground(new java.awt.Color(0, 102, 204));
+        SearchButtonReservation.setBackground(new java.awt.Color(153, 102, 0));
         SearchButtonReservation.setForeground(new java.awt.Color(51, 51, 0));
         SearchButtonReservation.setText("SEARCH");
         SearchButtonReservation.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +121,7 @@ public class SearchReservations extends javax.swing.JFrame {
             }
         });
 
+        searchCombo.setBackground(new java.awt.Color(153, 102, 0));
         searchCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchComboActionPerformed(evt);

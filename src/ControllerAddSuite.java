@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
@@ -18,6 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class ControllerAddSuite {
    Connection conn=null;
+   String check="";
     String querry;
     Statement st=null;
     public AddSuite addSt; 
@@ -33,6 +35,31 @@ public class ControllerAddSuite {
                           
     }
     
+    public String getAvail(){
+        return check;
+    }
+    
+//     public void controlCombo(){        
+//        actionListener = new ActionListener() {
+//            
+//              public void actionPerformed(ActionEvent actionEvent) {  
+//                  if (addSt.getAvail().getSelectedItem().equals("YES")) {                     
+//               check = (addSt.getAvail().getSelectedItem()).toString();
+//             
+//            }
+//                  else
+//                        if (addSt.getAvail().getSelectedItem().equals("NO")) {                     
+//               check = (addSt.getAvail().getSelectedItem()).toString();
+//              
+//            }
+//                      
+//              }
+//              
+//        };                
+//        addSt.getAvail().addActionListener(actionListener);
+//    }
+   
+    
     /**
      * Method to add flights
      */
@@ -45,10 +72,10 @@ public class ControllerAddSuite {
         
     PreparedStatement p =conn.prepareStatement(querry);
     p.setString(1, addSt.getSName().getText());
-    p.setString(2, addSt.getPrice().getText());
+    p.setString(2, addSt.getNumber().getText());
     p.setString(3, addSt.getSType().getText());
-    p.setString(4, addSt.getAvail().getText());
-    p.setString(4, addSt.getNumber().getText());
+    p.setString(4, addSt.getPrice().getText());
+    p.setString(5, addSt.getAvail().getSelectedItem().toString());
     p.execute();
         
     p.close();
@@ -74,10 +101,16 @@ public class ControllerAddSuite {
                   addSt.setVisible(false);
                   
                   }
+                  if(actionEvent.getSource()==addSt.getAvail()){
+                  addSt.setEnabled(true);
+                  
+                  }
+                  
               }
               
         };                
         addSt.getSaveButton().addActionListener(actionListener);
         addSt.getCloseButton().addActionListener(actionListener);
+        addSt.getAvail().addActionListener(actionListener);
     }
 }
