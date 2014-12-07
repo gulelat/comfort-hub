@@ -42,16 +42,16 @@ public class ControllerListSuites {
     public void showSuites(){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        querry="SELECT * FROM Flights ;" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        querry="SELECT * FROM suites ;" ;
         st=conn.prepareStatement(querry);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){
   
-   Object[] temp = {rs.getString("fName"), rs.getString("fFrom"),rs.getString("destination"),rs.getString("price"),
-                    rs.getString("fCapacity"),rs.getString("depatureTime"),rs.getString("arrivalTime")};
+   Object[] temp = {rs.getString("sName"), rs.getString("sNum"),rs.getString("type"),rs.getString("sPrice"),
+                    rs.getString("availability")};
    listSt.getTable().addRow(temp);
    }
    st.close();

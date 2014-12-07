@@ -42,15 +42,15 @@ public class ControllerDeleteSuite {
     public void deleteFlight(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        deleteF="DELETE FROM Flights where fName ='"+deleteSt.getKey()+"';" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        deleteF="DELETE FROM suites where sNum ='"+deleteSt.getKey()+"';" ;
         st=conn.createStatement();
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
         st.executeUpdate(deleteF);
         
         st.close();
         conn.close();
-        JOptionPane.showMessageDialog(null,"Flight has been deleted");
+        JOptionPane.showMessageDialog(null,"Suite has been deleted");
         }
         catch(Exception e){
          JOptionPane.showMessageDialog(null,e);

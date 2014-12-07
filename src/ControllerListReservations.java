@@ -44,16 +44,15 @@ public class ControllerListReservations {
     public void showOrders(){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        showStudent="SELECT * FROM Orders ;" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        showStudent="SELECT * FROM reservations ;" ;
         st=conn.prepareStatement(showStudent);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(showStudent);
    while(rs.next()){ 
-   Object[] temp = {rs.getString("Name"), rs.getString("passPortNo"),rs.getString("email"),rs.getString("phoneNO"),rs.getString("flightNo"),
-                    rs.getString("seatNo"),rs.getString("fFrom"),rs.getString("destination"),rs.getString("depatureTime"), 
-                    rs.getString("arrivalTime")};
+   Object[] temp = {rs.getString("pName"), rs.getString("roomNo"),rs.getString("nationality"),rs.getString("phoneNO"),rs.getString("roomType"),
+                    rs.getString("price"),rs.getString("TimeIn"),rs.getString("TimeOut")};
    listOrder.getTable().addRow(temp);
    }
    st.close();
@@ -69,7 +68,7 @@ public class ControllerListReservations {
     /**
      * Method to get source of button clicked using action listener
      */
-     public void contol(){        
+     public void control(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  
                   if(actionEvent.getSource()==listOrder.getListButton()){

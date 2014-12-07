@@ -22,10 +22,10 @@ public class log_in extends javax.swing.JFrame {
      * Creates new form log_in
      */
     public log_in() {
-        getContentPane().setBackground(Color.BLUE);
+        getContentPane().setBackground(Color.BLACK);
         initComponents();
     }
-    
+   
     public JButton getLoginButton(){
     return ok;
     }
@@ -56,15 +56,21 @@ public class log_in extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         visitor = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
 
         jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(51, 51, 0));
+        jLabel1.setForeground(new java.awt.Color(51, 204, 255));
         jLabel1.setText("USERNAME");
 
+        jLabel2.setBackground(new java.awt.Color(51, 51, 0));
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("PASSWORD");
 
+        ok.setBackground(new java.awt.Color(0, 204, 204));
         ok.setText("LOG IN");
         ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,12 +80,15 @@ public class log_in extends javax.swing.JFrame {
 
         jLabel3.setText("first time user?");
 
+        visitor.setBackground(new java.awt.Color(0, 51, 51));
         visitor.setText("NEW USER");
         visitor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 visitorActionPerformed(evt);
             }
         });
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Desktop\\login.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,7 +105,7 @@ public class log_in extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(59, 59, 59)
                         .addComponent(visitor)
-                        .addContainerGap(132, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -105,12 +114,17 @@ public class log_in extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(username)
                             .addComponent(password, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
-                        .addGap(36, 36, 36))))
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(180, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -182,6 +196,7 @@ public class log_in extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton ok;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField username;

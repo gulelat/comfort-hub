@@ -33,18 +33,18 @@ public class ControllerListHotEmp {
     /**
      * Method to display available orders in database
      */
-    public void showOrders(){
+    public void showEmployees(){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        querry="SELECT * FROM Employees ;" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        querry="SELECT * FROM employees ;" ;
         st=conn.prepareStatement(querry);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(querry);
             while(rs.next()){
-                Object[] temp = {rs.getString("eId"), rs.getString("eName"),rs.getString("email")};
-                listEmp.getEmpTable().addRow(temp);
+                Object[] temp = {rs.getString("eId"), rs.getString("eName"),rs.getString("email"),rs.getString("password")};
+                listEmp.getEmpTable().addRow(temp); 
             }
             st.close();
             conn.close();
@@ -60,7 +60,7 @@ public class ControllerListHotEmp {
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  
                   if(actionEvent.getSource()==listEmp.getListButton()){
-                        showOrders();
+                        showEmployees();
                   }
                   if(actionEvent.getSource()==listEmp.getCloseButton()){
                   listEmp.setVisible(false);

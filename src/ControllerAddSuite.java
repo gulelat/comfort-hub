@@ -36,12 +36,12 @@ public class ControllerAddSuite {
     /**
      * Method to add flights
      */
-    public void addFlights(){
+    public void addSuites(){
     try{
        Class.forName("com.mysql.jdbc.Driver");
-       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
+       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
        
-        querry=("INSERT INTO Flights SET fName=?,fFrom=? ,destination =?,Price =?,fCapacity =?,depatureTime =?, arrivalTime=?;");
+        querry=("INSERT INTO suites SET sName=?,sNum=? ,type =?,sPrice =?,availability =?;");
         
     PreparedStatement p =conn.prepareStatement(querry);
     p.setString(1, addSt.getSName().getText());
@@ -53,7 +53,7 @@ public class ControllerAddSuite {
         
     p.close();
    conn.close();
-  JOptionPane.showMessageDialog(null, "Flight has been succesfully added");
+  JOptionPane.showMessageDialog(null, "Suite has been succesfully added");
     }  
     catch(Exception e){
     JOptionPane.showMessageDialog(null,e);
@@ -68,7 +68,7 @@ public class ControllerAddSuite {
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  
                   if(actionEvent.getSource()==addSt.getSaveButton()){
-                        addFlights();
+                        addSuites();
                   }
                   if(actionEvent.getSource()==addSt.getCloseButton()){
                   addSt.setVisible(false);

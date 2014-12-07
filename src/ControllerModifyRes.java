@@ -45,24 +45,24 @@ public class ControllerModifyRes {
         key = modifyOrder.getPNum().getText();
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-            query="SELECT * FROM Orders  WHERE passPortNo LIKE'%"+key+"%'";
+            connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+            query="SELECT * FROM reservations  WHERE phoneNO LIKE'%"+key+"%'";
             stmt=connection.prepareStatement(query);
-            stmt.execute("USE jetwingdb;");
+            stmt.execute("USE comfort_hub_db;");
 
             ResultSet rs= stmt.executeQuery(query);
         
             while(rs.next()){
  
-                modifyOrder.getSearch().setText(rs.getString("name"));
-                modifyOrder.getPNum().setText(rs.getString("passPortNo"));
-                modifyOrder.getNationality().setText(rs.getString("email"));
-                modifyOrder.getNameField().setText(rs.getString("phoneNO"));
-                modifyOrder.getPriceField().setText(rs.getString("flightNo"));
-                modifyOrder.getRNum().setText(rs.getString("seatNo"));
-                modifyOrder.getRoomType().setText(rs.getString("fFrom"));
-                modifyOrder.getTIMEIN().setText(rs.getString("destination"));
-                modifyOrder.getTIMEOUT().setText(rs.getString("depatureTime")); 
+                modifyOrder.getSearch().setText(rs.getString("roomNo"));
+                modifyOrder.getNameField().setText(rs.getString("pName"));
+                modifyOrder.getPNum().setText(rs.getString("phoneNO"));
+                modifyOrder.getNationality().setText(rs.getString("nationality"));
+                modifyOrder.getRoomType().setText(rs.getString("roomType"));
+                modifyOrder.getRNum().setText(rs.getString("roomNo"));
+                modifyOrder.getPriceField().setText(rs.getString("price"));           
+                modifyOrder.getTIMEIN().setText(rs.getString("TimeIn"));
+                modifyOrder.getTIMEOUT().setText(rs.getString("TimeOut")); 
                 
         }
   
@@ -85,13 +85,11 @@ public class ControllerModifyRes {
     try{
         Class.forName("com.mysql.jdbc.Driver");
         //jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull [root on Default schema]
-        connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        query="UPDATE Orders SET name=?, passPortNo=?, email=?, phoneNo=?, flightNo=?, seatNo=?, fFrom=?, destination=?, depatureTime=?, arrivalTime=?"
-                + "where passPortNo like '%"+ key +"%';";
-//        querry = "update flights set fName =?,ffrom=?,destination=?,Price=?,fCapacity=?,depatureTime=?,arrivalTime=?"
-//                    + "where fName like '%" + ky + "%'";
+        connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        query="UPDATE reservations SET pName=?, phoneNO=?, nationality=?, roomType=?, roomNo=?, price=?, TimeIn=?, TimeOut=?" + "where phoneNO like '%"+ key +"%';";
+
         PreparedStatement st=connection.prepareStatement(query);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
    st.setString(1, modifyOrder.getSearch().getText());
    st.setString(2, modifyOrder.getPNum().getText());

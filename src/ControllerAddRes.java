@@ -53,14 +53,14 @@ public class ControllerAddRes {
          
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        querry="SELECT * FROM Flights ;" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        querry="SELECT * FROM suites ;" ;
         st=conn.prepareStatement(querry);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){
-   EnterOrder.getRnum().addItem(rs.getString("fName"));
+   EnterOrder.getRnum().addItem(rs.getString("sNum"));
   
    }
    st.close();
@@ -79,9 +79,9 @@ public class ControllerAddRes {
     public void addOrders(){
     try{
        Class.forName("com.mysql.jdbc.Driver");
-       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
+       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
        
-        querry=("INSERT INTO orders SET Name=?,passPortNo=? ,email =?,phoneNo =?,flightNo =?,seatNo=? ,fFrom =?,destination =?,depatureTime =?, arrivalTime=?;");
+        querry=("INSERT INTO reservations SET pName=?,roomNo=? ,nationality =?,phoneNO =?,roomType =?,price=? ,TimeIn =?,TimeOut =?;");
         
     PreparedStatement p =conn.prepareStatement(querry);
     p.setString(1, EnterOrder.getPName().getText());
@@ -110,7 +110,7 @@ public class ControllerAddRes {
      * Method to get source of button clicked using action listener 
      * and display the in combo form
      */
-    public void contolCombo(){        
+    public void controlCombo(){        
         actionListener = new ActionListener() {
             
               public void actionPerformed(ActionEvent actionEvent) {  
@@ -132,17 +132,17 @@ public class ControllerAddRes {
      public void setDetails(String d){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        querry="SELECT fFrom,destination,depatureTime,arrivalTime FROM Flights WHERE fName LIKE '%"+d+"%';" ; 
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        querry="SELECT price,TimeOut,TimeIn FROM reservations WHERE phoneNO LIKE '%"+d+"%';" ; 
         st=conn.prepareStatement(querry);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){
     //EnterOrder.getFrom().setText(rs.getString("fFrom"));
-    EnterOrder.getPrice().setText(rs.getString("destination"));
-    EnterOrder.getTimeOut().setText(rs.getString("depatureTime"));
-    EnterOrder.getTimeIn().setText(rs.getString("arrivalTime"));
+    EnterOrder.getPrice().setText(rs.getString("price"));
+    EnterOrder.getTimeOut().setText(rs.getString("TimeOut"));
+    EnterOrder.getTimeIn().setText(rs.getString("TimeIn"));
      
    }
    st.close();

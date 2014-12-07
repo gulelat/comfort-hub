@@ -41,10 +41,10 @@ public class ControllerDeleteRes {
     public void deleteOrder(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","root");
-        deleteOrd="DELETE FROM Orders where passPortNo ="+deleteOrder.getKey()+";" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        deleteOrd="DELETE FROM reservations where phoneNO ="+deleteOrder.getKey()+";" ;
         st=conn.createStatement();
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
         st.executeUpdate(deleteOrd);
         
         st.close();

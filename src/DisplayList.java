@@ -1,6 +1,7 @@
 
+import java.awt.Color;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
-import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,34 +12,46 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Dorothy
  */
-public class ListReservations extends javax.swing.JFrame {
-    String[] columns = {"pName","roomNo","nationality", "phoneNO","roomType","price","TimeIn","TimeOut"};
-    DefaultTableModel table= new DefaultTableModel(columns,0);
+public class DisplayList extends javax.swing.JFrame {
     
     /**
-     * Creates new form ListOrders
+     * Object declarations
      */
-    public DefaultTableModel getTable (){
-        System.out.println("Table was created");
-        return table;
-    }
-    
-     /**
-     * 
-     * @return jButton1, jButton3
-     */
-    public JButton getListButton(){
-         return list;
-    }
-    public JButton getCloseButton(){
-         return close;
-    }
+    public ListReservations listData;
+    DefaultListModel listModel;
 
     /**
-     * Creates new form ListReservations
+     * Creates new form DisplayList
      */
-    public ListReservations() {
+    public DisplayList() {
+        this.listModel = new DefaultListModel();
+        listData = new ListReservations();
+        getContentPane().setBackground(Color.BLACK);
         initComponents();
+    }
+    
+    /**
+     * 
+     * @return listModel
+     */
+    public DefaultListModel model(){
+        return listModel;
+    }
+    
+    /**
+     * 
+     * @return list_button
+     */
+    public JButton getListButton(){
+        return list;
+    }
+    
+    /**
+     * 
+     * @return close_button
+     */
+    public JButton getCloseButton(){
+        return close;
     }
 
     /**
@@ -51,14 +64,14 @@ public class ListReservations extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jList1 = new javax.swing.JList();
         list = new javax.swing.JButton();
         close = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(table);
-        jScrollPane1.setViewportView(jTable1);
+        jList1.setModel(listModel);
+        jScrollPane1.setViewportView(jList1);
 
         list.setText("LIST");
 
@@ -69,26 +82,26 @@ public class ListReservations extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(list, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(close, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(list)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(close)
+                .addGap(72, 72, 72))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(list)
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(close)
-                .addGap(27, 27, 27))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(list)
+                    .addComponent(close))
+                .addContainerGap())
         );
 
         pack();
@@ -111,28 +124,28 @@ public class ListReservations extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListReservations.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListReservations.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListReservations.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListReservations.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DisplayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListReservations().setVisible(true);
+                new DisplayList().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton close;
+    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton list;
     // End of variables declaration//GEN-END:variables
 }

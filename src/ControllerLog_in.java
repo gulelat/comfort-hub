@@ -34,10 +34,10 @@ public class ControllerLog_in {
      public void showEmployee(){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull","root","");
-        querry="SELECT * FROM Employees WHERE eName like '%"+login.getUsernameField().getText()+"%' AND password like '%"+login.getPasswordField().getText()+"%' ;" ;
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        querry="SELECT * FROM employees WHERE eName like '%"+login.getUsernameField().getText()+"%' AND password like '%"+login.getPasswordField().getText()+"%' ;" ;
         st=conn.prepareStatement(querry);
-        st.execute("USE jetwingdb;");
+        st.execute("USE comfort_hub_db;");
 
         ResultSet rs= st.executeQuery(querry);
         if (!rs.next() ) {

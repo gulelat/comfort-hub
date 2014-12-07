@@ -44,8 +44,8 @@ public class ControllerModEmp {
         ky = modEmp.getSearchField().getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull", "root", "root");
-            querry = "update Employees set eId =?,eName=?,email=?,password=?, "
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull", "root", "root");
+            querry = "update employees set eId =?,eName=?,email=?,password=?, "
                     + "where eId like '%" + ky + "%'";
             PreparedStatement stmt = conn.prepareStatement(querry);
 
@@ -72,10 +72,10 @@ public class ControllerModEmp {
         System.out.println(ky);
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull", "root", "root");
-            querry = "SELECT * FROM Employees where eId like '%" + ky + "%'";
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull", "root", "root");
+            querry = "SELECT * FROM employees where eId like '%" + ky + "%'";
             st = conn.prepareStatement(querry);
-            st.execute("USE jetwingdb;");
+            st.execute("USE comfort_hub_db;");
 
             ResultSet rs = st.executeQuery(querry);
             while (rs.next()) {
@@ -83,7 +83,7 @@ public class ControllerModEmp {
                 modEmp.getIdField().setText(rs.getString("eId"));
                 modEmp.getNameField().setText(rs.getString("eName"));
                 modEmp.getEmailField().setText(rs.getString("email"));
-                modEmp.getPasswordField().setText(rs.getString("Password"));
+                modEmp.getPasswordField().setText(rs.getString("password"));
             }
 
         } catch (Exception e) {
