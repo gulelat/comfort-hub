@@ -42,10 +42,10 @@ public class ControllerDeleteSuite {
     public void deleteFlight(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
         deleteF="DELETE FROM suites where sNum ='"+deleteSt.getKey()+"';" ;
         st=conn.createStatement();
-        st.execute("USE comfort_hub_db;");
+        st.execute("USE comfort_hub;");
         st.executeUpdate(deleteF);
         
         st.close();

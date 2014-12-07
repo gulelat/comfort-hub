@@ -53,10 +53,10 @@ public class ControllerAddRes {
          
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
         querry="SELECT * FROM suites ;" ;
         st=conn.prepareStatement(querry);
-        st.execute("USE comfort_hub_db;");
+        st.execute("USE comfort_hub;");
 
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){
@@ -79,7 +79,7 @@ public class ControllerAddRes {
     public void addOrders(){
     try{
        Class.forName("com.mysql.jdbc.Driver");
-       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
        
         querry=("INSERT INTO reservations SET pName=?,roomNo=? ,nationality =?,phoneNO =?,roomType =?,price=? ,TimeIn =?,TimeOut =?;");
         
@@ -132,10 +132,10 @@ public class ControllerAddRes {
      public void setDetails(String d){
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
         querry="SELECT price,TimeOut,TimeIn FROM reservations WHERE phoneNO LIKE '%"+d+"%';" ; 
         st=conn.prepareStatement(querry);
-        st.execute("USE comfort_hub_db;");
+        st.execute("USE comfort_hub;");
 
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){

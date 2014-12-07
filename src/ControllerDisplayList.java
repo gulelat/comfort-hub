@@ -45,10 +45,10 @@ public class ControllerDisplayList {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             //jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull [root on Default schema]
-            connect =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+            connect =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
             list="SELECT * FROM reservations ;" ;
             stmt=connect.prepareStatement(list);
-            stmt.execute("USE comfort_hub_db;");
+            stmt.execute("USE comfort_hub;");
 
             ResultSet rs= stmt.executeQuery(list);
             

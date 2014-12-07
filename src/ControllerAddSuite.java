@@ -39,7 +39,7 @@ public class ControllerAddSuite {
     public void addSuites(){
     try{
        Class.forName("com.mysql.jdbc.Driver");
-       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+       conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
        
         querry=("INSERT INTO suites SET sName=?,sNum=? ,type =?,sPrice =?,availability =?;");
         

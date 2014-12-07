@@ -78,9 +78,11 @@ public class log_in extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(0, 204, 255));
         jLabel3.setText("first time user?");
 
         visitor.setBackground(new java.awt.Color(0, 51, 51));
+        visitor.setForeground(new java.awt.Color(0, 153, 153));
         visitor.setText("NEW USER");
         visitor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

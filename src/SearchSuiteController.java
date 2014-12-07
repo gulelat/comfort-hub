@@ -38,7 +38,7 @@ public class SearchSuiteController {
     public void control(){
         try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub_db?user=root&password=root");
+                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
                     //System.out.println("passes");
         }catch (Exception e){
             System.out.println("exception in control "+e.toString());
@@ -102,7 +102,7 @@ public class SearchSuiteController {
            
             try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
-                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub_db?user=root&password=root");
+                    conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost/comfort_hub?user=root&password=root");
                     //System.out.println("passes");
         }catch (Exception e){
             System.out.println("exception in control "+e.toString());

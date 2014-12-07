@@ -45,10 +45,10 @@ public class ControllerModifyRes {
         key = modifyOrder.getPNum().getText();
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+            connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
             query="SELECT * FROM reservations  WHERE phoneNO LIKE'%"+key+"%'";
             stmt=connection.prepareStatement(query);
-            stmt.execute("USE comfort_hub_db;");
+            stmt.execute("USE comfort_hub;");
 
             ResultSet rs= stmt.executeQuery(query);
         
@@ -85,11 +85,11 @@ public class ControllerModifyRes {
     try{
         Class.forName("com.mysql.jdbc.Driver");
         //jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull [root on Default schema]
-        connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
         query="UPDATE reservations SET pName=?, phoneNO=?, nationality=?, roomType=?, roomNo=?, price=?, TimeIn=?, TimeOut=?" + "where phoneNO like '%"+ key +"%';";
 
         PreparedStatement st=connection.prepareStatement(query);
-        st.execute("USE comfort_hub_db;");
+        st.execute("USE comfort_hub;");
 
    st.setString(1, modifyOrder.getSearch().getText());
    st.setString(2, modifyOrder.getPNum().getText());

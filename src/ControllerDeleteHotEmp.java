@@ -33,11 +33,11 @@ public class ControllerDeleteHotEmp {
      public void deleteOrder(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub_db?zeroDateTimeBehavior=convertToNull","root","root");
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
        System.out.println("The key is"+deleteEmp.getKey());
         querry="DELETE FROM employees where eId ="+deleteEmp.getKey()+";" ;
         st=conn.createStatement();
-        st.execute("USE comfort_hub_db;");
+        st.execute("USE comfort_hub;");
         st.executeUpdate(querry);
         
         st.close();
