@@ -54,12 +54,12 @@ public class ControllerModifyRes {
         
             while(rs.next()){
  
-                modifyOrder.getSearch().setText(rs.getString("roomNo"));
+                //modifyOrder.getSearch().setText(rs.getString("roomNo"));
                 modifyOrder.getNameField().setText(rs.getString("pName"));
-                modifyOrder.getPNum().setText(rs.getString("phoneNO"));
+                modifyOrder.getRNum().setText(rs.getString("roomNO"));
                 modifyOrder.getNationality().setText(rs.getString("nationality"));
+                modifyOrder.getPNum().setText(rs.getString("phoneNo"));
                 modifyOrder.getRoomType().setText(rs.getString("roomType"));
-                modifyOrder.getRNum().setText(rs.getString("roomNo"));
                 modifyOrder.getPriceField().setText(rs.getString("price"));           
                 modifyOrder.getTIMEIN().setText(rs.getString("TimeIn"));
                 modifyOrder.getTIMEOUT().setText(rs.getString("TimeOut")); 
@@ -86,20 +86,20 @@ public class ControllerModifyRes {
         Class.forName("com.mysql.jdbc.Driver");
         //jdbc:mysql://localhost:3306/jetwingdb?zeroDateTimeBehavior=convertToNull [root on Default schema]
         connection =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
-        query="UPDATE reservations SET pName=?, phoneNO=?, nationality=?, roomType=?, roomNo=?, price=?, TimeIn=?, TimeOut=?" + "where phoneNO like '%"+ key +"%';";
+        query="UPDATE reservations SET pName=?,roomNo=?, nationality=?, phoneNO=?, roomType=?,  price=?, TimeIn=?, TimeOut=?" + "where phoneNO like '%"+ key +"%';";
 
         PreparedStatement st=connection.prepareStatement(query);
         st.execute("USE comfort_hub;");
 
-   st.setString(1, modifyOrder.getSearch().getText());
-   st.setString(2, modifyOrder.getPNum().getText());
+  // st.setString(1, modifyOrder.getSearch().getText());
+   st.setString(1, modifyOrder.getNameField().getText());
+   st.setString(2, modifyOrder.getRNum().getText());
    st.setString(3, modifyOrder.getNationality().getText());
-   st.setString(4, modifyOrder.getNameField().getText());
-   st.setString(5, modifyOrder.getPriceField().getText());
-   st.setString(6, modifyOrder.getRNum().getText());
-   st.setString(7, modifyOrder.getRoomType().getText());
-   st.setString(8, modifyOrder.getTIMEIN().getText());
-   st.setString(9, modifyOrder.getTIMEOUT().getText());
+   st.setString(4, modifyOrder.getPNum().getText());
+   st.setString(5, modifyOrder.getRoomType().getText());
+   st.setString(6, modifyOrder.getPriceField().getText());
+   st.setString(7, modifyOrder.getTIMEIN().getText());
+   st.setString(8, modifyOrder.getTIMEOUT().getText());
   
    st.execute();
    JOptionPane.showMessageDialog(null, "Order modified succesfully");

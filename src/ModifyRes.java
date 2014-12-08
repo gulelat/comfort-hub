@@ -99,24 +99,33 @@ public class ModifyRes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ENTER ROOM NUMBER TO MODIFY");
+        jLabel1.setForeground(new java.awt.Color(153, 102, 0));
+        jLabel1.setText("ENTER PHONE NUMBER TO MODIFY");
 
         searchNum.setText("SEARCH");
 
+        jLabel2.setForeground(new java.awt.Color(153, 102, 0));
         jLabel2.setText("NAME");
 
+        jLabel3.setForeground(new java.awt.Color(153, 102, 0));
         jLabel3.setText("PHONE NUMBER");
 
+        jLabel4.setForeground(new java.awt.Color(153, 102, 0));
         jLabel4.setText("NATIONALITY");
 
+        jLabel5.setForeground(new java.awt.Color(153, 102, 0));
         jLabel5.setText("ROOM TYPE");
 
+        jLabel6.setForeground(new java.awt.Color(153, 102, 0));
         jLabel6.setText("ROOM NUMBER");
 
+        jLabel7.setForeground(new java.awt.Color(153, 102, 0));
         jLabel7.setText("PRICE");
 
+        jLabel8.setForeground(new java.awt.Color(153, 102, 0));
         jLabel8.setText("TIME IN");
 
+        jLabel9.setForeground(new java.awt.Color(153, 102, 0));
         jLabel9.setText("TIME OUT");
 
         save.setText("SAVE");
@@ -132,7 +141,7 @@ public class ModifyRes extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
                 .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addComponent(searchNum)
                 .addGap(19, 19, 19))
             .addGroup(layout.createSequentialGroup()
