@@ -102,6 +102,8 @@ public class ModifyRes extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("ENTER PHONE NUMBER TO MODIFY");
 
+        searchNum.setBackground(new java.awt.Color(153, 102, 0));
+        searchNum.setForeground(new java.awt.Color(153, 102, 0));
         searchNum.setText("SEARCH");
 
         jLabel2.setForeground(new java.awt.Color(153, 102, 0));
@@ -128,8 +130,12 @@ public class ModifyRes extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(153, 102, 0));
         jLabel9.setText("TIME OUT");
 
+        save.setBackground(new java.awt.Color(153, 102, 0));
+        save.setForeground(new java.awt.Color(153, 102, 0));
         save.setText("SAVE");
 
+        close.setBackground(new java.awt.Color(153, 102, 0));
+        close.setForeground(new java.awt.Color(153, 102, 0));
         close.setText("CLOSE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

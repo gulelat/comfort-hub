@@ -80,8 +80,8 @@ public class ControllerExport {
         }
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){ 
-   outPutStream.println( rs.getString("pName")+"  "+ rs.getString("roomNo")+"  "+rs.getString("roomType")+"  "+rs.getString("phoneNO")
-           +" " +rs.getString("nationality")+" " +rs.getString("availability")+" "+rs.getString("sPrice")+"  "+rs.getString("TimeOut")+" "+ rs.getString("TimeIn"));
+   outPutStream.println( rs.getString("pName")+"  "+ rs.getString("roomNo")+"  "+rs.getString("nationality")+"  "+rs.getString("phoneNO")
+           +" " +rs.getString("roomType")+" " +rs.getString("price")+"  "+rs.getString("TimeIn")+" "+ rs.getString("TimeOut"));
    
    }
    JOptionPane.showMessageDialog(null,"Saving Completed");

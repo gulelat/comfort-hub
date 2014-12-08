@@ -42,7 +42,7 @@ public class SearchEmployee extends javax.swing.JFrame {
         employeeTable.setEnabled(false);
         employeeTable.setModel(dm);
         dm.setColumnIdentifiers(colname);
-        msgLabel.setText("Select either eId, eName, email or password");
+        //msgLabel.setText("Select either eId, eName, email or password");
         
         
         for(int i=0; i<searchOptions.length;i++){       //add items to combobox
@@ -94,7 +94,6 @@ public JComboBox getsearchCombo(){
        return  searchCombo;
     }
 
-
 public JLabel getmsgLabel(){
        return  msgLabel;
     }
@@ -132,7 +131,6 @@ return dm;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         msgLabel.setBackground(new java.awt.Color(255, 255, 255));
-        msgLabel.setText("jLabel3");
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("EMPLOYEE");
@@ -184,9 +182,6 @@ return dm;
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(CLOSEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -194,7 +189,10 @@ return dm;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SearchEmployeeText, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SearchButtonEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SearchButtonEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(222, 222, 222)
+                        .addComponent(CLOSEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

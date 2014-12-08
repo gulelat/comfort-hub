@@ -2,6 +2,13 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="menubar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -129,61 +136,56 @@
                   <Component id="ADDEMP" alignment="0" max="32767" attributes="0"/>
                   <Component id="DELETEMP" alignment="0" max="32767" attributes="0"/>
                   <Component id="LISTEMP" alignment="0" max="32767" attributes="0"/>
-                  <Component id="IMPORT" alignment="1" max="32767" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="SEARCH" min="-2" pref="82" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="LISTSUITE" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="EXPORT" alignment="1" pref="82" max="32767" attributes="0"/>
-                                  <Component id="DELETESUITES" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="ADDSUITES" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="LISTSUITE" alignment="1" max="32767" attributes="0"/>
+                          <Component id="EXPORT" alignment="1" pref="82" max="32767" attributes="0"/>
+                          <Component id="DELETESUITES" alignment="1" max="32767" attributes="0"/>
+                          <Component id="ADDSUITES" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="ADDRES" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="DELETERES" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="LISTRES" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="MODIFYRES" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="73" max="32767" attributes="0"/>
-                      <Component id="LISTALL" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="ADDRES" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="DELETERES" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="LISTRES" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="MODIFYRES" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
           <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <Component id="SEARCH" min="-2" pref="126" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <Component id="LISTALL" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -233,10 +235,9 @@
                   <Component id="LISTEMP" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="SEARCH" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="LISTALL" min="-2" max="-2" attributes="0"/>
-                  <Component id="IMPORT" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -323,11 +324,6 @@
         <Property name="text" type="java.lang.String" value="LIST"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="IMPORT">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="IMPORT"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="EXPORT">
       <Properties>
         <Property name="text" type="java.lang.String" value="EXPORT"/>
@@ -346,7 +342,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dorothy\Desktop\homepage.jpg"/>
+          <Image iconType="2" name="C:\Users\Dorothy\Documents\NetBeansProjects\comfort-hub\homepage.jpg"/>
         </Property>
       </Properties>
     </Component>

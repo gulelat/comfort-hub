@@ -23,37 +23,43 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="name" alignment="0" max="32767" attributes="0"/>
-                  <Component id="num" max="32767" attributes="0"/>
-                  <Component id="nationality" alignment="1" max="32767" attributes="0"/>
-                  <Component id="type" alignment="1" max="32767" attributes="0"/>
-                  <Component id="Rnum" alignment="1" max="32767" attributes="0"/>
-                  <Component id="price" alignment="1" max="32767" attributes="0"/>
-                  <Component id="timeIn" max="32767" attributes="0"/>
-                  <Component id="timeOut" alignment="0" max="32767" attributes="0"/>
-                  <Component id="save" alignment="1" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Rprice" max="32767" attributes="0"/>
-                  <Component id="in" max="32767" attributes="0"/>
-                  <Component id="jComboBox1" max="32767" attributes="0"/>
-                  <Component id="out" alignment="1" max="32767" attributes="0"/>
-                  <Component id="Rtype" alignment="0" max="32767" attributes="0"/>
-                  <Component id="Pnation" alignment="0" max="32767" attributes="0"/>
-                  <Component id="Pnum" max="32767" attributes="0"/>
-                  <Component id="Pname" alignment="0" max="32767" attributes="0"/>
-                  <Component id="close" alignment="0" pref="66" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="name" alignment="0" max="32767" attributes="0"/>
+                          <Component id="num" max="32767" attributes="0"/>
+                          <Component id="nationality" alignment="1" max="32767" attributes="0"/>
+                          <Component id="type" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Rnum" alignment="1" max="32767" attributes="0"/>
+                          <Component id="price" alignment="1" max="32767" attributes="0"/>
+                          <Component id="timeIn" max="32767" attributes="0"/>
+                          <Component id="timeOut" alignment="0" max="32767" attributes="0"/>
+                          <Component id="save" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Rprice" max="32767" attributes="0"/>
+                          <Component id="in" max="32767" attributes="0"/>
+                          <Component id="jComboBox1" max="32767" attributes="0"/>
+                          <Component id="out" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Rtype" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Pnation" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Pnum" max="32767" attributes="0"/>
+                          <Component id="Pname" alignment="0" max="32767" attributes="0"/>
+                          <Component id="close" alignment="0" pref="113" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,8 +67,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="157" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="157" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="jLabel2" pref="195" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Pname" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -104,7 +119,7 @@
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
                       <Component id="save" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -220,9 +235,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Dorothy\Desktop\res.jpg"/>
+          <Image iconType="2" name="C:\Users\Dorothy\Documents\NetBeansProjects\comfort-hub\res.jpg"/>
         </Property>
       </Properties>
     </Component>

@@ -38,7 +38,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="102" max="32767" attributes="0"/>
+              <EmptySpace pref="93" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,7 +61,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ENTER ROOM NUMBER TO DELTE ORDER"/>
+        <Property name="text" type="java.lang.String" value="ENTER PHONE NUMBER TO DELETE ORDER"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="takeRnum">

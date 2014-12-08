@@ -56,11 +56,12 @@ public class Hotel_Employee extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         TAKEID = new javax.swing.JTextField();
         TAKENAME = new javax.swing.JTextField();
-        TAKEPASS = new javax.swing.JTextField();
         TAKEMAIL = new javax.swing.JTextField();
         SAVE = new javax.swing.JButton();
         EXIT = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        TAKEPASS = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,7 +88,7 @@ public class Hotel_Employee extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Desktop\\emp.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Documents\\NetBeansProjects\\comfort-hub\\emp.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,16 +115,22 @@ public class Hotel_Employee extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TAKENAME)
                             .addComponent(TAKEID)
-                            .addComponent(TAKEPASS)
-                            .addComponent(TAKEMAIL, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))
+                            .addComponent(TAKEMAIL, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                            .addComponent(TAKEPASS))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(TAKEID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -195,11 +202,12 @@ public class Hotel_Employee extends javax.swing.JFrame {
     private javax.swing.JTextField TAKEID;
     private javax.swing.JTextField TAKEMAIL;
     private javax.swing.JTextField TAKENAME;
-    private javax.swing.JTextField TAKEPASS;
+    private javax.swing.JPasswordField TAKEPASS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

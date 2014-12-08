@@ -38,13 +38,42 @@ public class ControllerModEmp {
     
   
     
+       /**
+     * Method to update list
+     */
+    public void setList() {
+        int ky;
+        ky = Integer.parseInt(modEmp.getSearchField().getText());
+        System.out.println(ky);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
+            String querry2 = "update employees set eName=?,email=?,password=?"
+                    + "where eId=?";
+          
+            PreparedStatement stmt = conn.prepareStatement(querry2);
+
+            stmt.setString(1, modEmp.getNameField().getText());
+            stmt.setString(2, modEmp.getEmailField().getText());
+            stmt.setString(3, modEmp.getPasswordField().getText());
+            stmt.setInt(4, ky);
+            stmt.execute();
+            conn.close();
+            JOptionPane.showMessageDialog(null, "Employee modified succesfully");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+    }
+    
+    
     /**
      * Method to display available flights
      */
     public void listEmps() {
 
         String ky = "";
-        ky = modEmp.getIdField().getText();
+        ky = modEmp.getSearchField().getText();
         System.out.println(ky);
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -62,32 +91,6 @@ public class ControllerModEmp {
                 modEmp.getPasswordField().setText(rs.getString("password"));
             }
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-    }
-    
-       /**
-     * Method to update list
-     */
-    public void setList() {
-        String ky = "";
-        ky = modEmp.getIdField().getText();
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
-            querry = "update employees set eId =?,eName=?,email=?,password=?, "
-                    + "where eId like '%" + ky + "%'";
-            PreparedStatement stmt = conn.prepareStatement(querry);
-
-            stmt.setString(1, modEmp.getIdField().getText());
-            stmt.setString(2, modEmp.getNameField().getText());
-            stmt.setString(3, modEmp.getEmailField().getText());
-            stmt.setString(4, modEmp.getPasswordField().getText());
-            stmt.execute();
-            conn.close();
-            JOptionPane.showMessageDialog(null, "Employee modified succesfully");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }

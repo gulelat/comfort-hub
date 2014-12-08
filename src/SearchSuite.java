@@ -128,7 +128,7 @@ public class SearchSuite extends javax.swing.JFrame {
         jLabel3.setText("Suites");
 
         SEARCHButtonReservation.setBackground(new java.awt.Color(153, 102, 0));
-        SEARCHButtonReservation.setText("SEARCH USING RESERVATION");
+        SEARCHButtonReservation.setText("SEARCH RESERVATIONS");
         SEARCHButtonReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SEARCHButtonReservationActionPerformed(evt);
@@ -136,7 +136,7 @@ public class SearchSuite extends javax.swing.JFrame {
         });
 
         SEARCHButtonEmployee.setBackground(new java.awt.Color(153, 102, 0));
-        SEARCHButtonEmployee.setText("SEARCH USING  EMPLOYEE");
+        SEARCHButtonEmployee.setText("SEARCH EMPLOYEES");
         SEARCHButtonEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SEARCHButtonEmployeeActionPerformed(evt);
@@ -148,7 +148,7 @@ public class SearchSuite extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(123, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -169,12 +169,12 @@ public class SearchSuite extends javax.swing.JFrame {
                         .addGap(204, 204, 204))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(msgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(msgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
