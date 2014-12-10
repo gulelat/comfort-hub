@@ -31,6 +31,7 @@ public class HomePageController {
     DeleteHotEmp deleteEmployee= new DeleteHotEmp();
     Billings  addBill = new Billings();
     PrintBill printing = new PrintBill();
+    LOGINS show = new LOGINS();
     
     
     /**
@@ -48,53 +49,57 @@ public class HomePageController {
     public void control(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) { 
-                  if(actionEvent.getSource()==home.gETADDEMP()){ 
-                      ControllerAddHotEmp add= new ControllerAddHotEmp();
-                         add.control();
-                  }
+//                  if(actionEvent.getSource()==home.gETADDEMP()){ 
+//                      ControllerAddHotEmp add= new ControllerAddHotEmp();
+//                         add.control();
+//                  }
                   if(actionEvent.getSource()==home.gETBILL()){
                       ControllerBillings b= new ControllerBillings();
                         b.control(); 
                   }
+                  if(actionEvent.getSource()==home.getLoginNum()){
+                      ControllerGetLog b= new ControllerGetLog();
+                        b.control(); 
+                  }
                                     
-                  if(actionEvent.getSource()==home.getMODIFYEMP()){
-                      ControllerModEmp c= new ControllerModEmp();
-                        c.control(); 
-                  }
-                  if(actionEvent.getSource()==home.getDELETEMP()){
-                      ControllerDeleteHotEmp delete= new ControllerDeleteHotEmp();
-                        delete.contol();
-                  }
-                  if(actionEvent.getSource()==home.getLISTEMP()){
-                      ControllerListHotEmp cE= new ControllerListHotEmp();
-                        cE.contol();
-                  }
-                  if(actionEvent.getSource()==home.getADDSUITES()){  
-                      ControllerAddSuite c= new ControllerAddSuite();
-                     c.contol();
-                  }
-                  
-                  if(actionEvent.getSource()==home.getDELETESUITES()){
-                      ControllerDeleteSuite deleteF= new ControllerDeleteSuite();
-                        deleteF.control();
-                  }
-                  if(actionEvent.getSource()==home.getLISTSUITE()){
-                      ControllerListSuites cF= new ControllerListSuites();
-                        cF.contol();
-                  }
-                  if(actionEvent.getSource()==home.getADDRES()){
-                      ControllerAddRes Ao= new ControllerAddRes();
-                      Ao.control();
-                      Ao.controlCombo();
-                  }
-                  if(actionEvent.getSource()==home.getMODIFYRES()){
-                       ControllerModifyRes c= new ControllerModifyRes();
-                        c.control();
-                  }
-                  if(actionEvent.getSource()==home.getDELETERES()){
-                      ControllerDeleteRes deleteO= new ControllerDeleteRes();
-                        deleteO.control();
-                  }
+//                  if(actionEvent.getSource()==home.getMODIFYEMP()){
+//                      ControllerModEmp c= new ControllerModEmp();
+//                        c.control(); 
+//                  }
+//                  if(actionEvent.getSource()==home.getDELETEMP()){
+//                      ControllerDeleteHotEmp delete= new ControllerDeleteHotEmp();
+//                        delete.contol();
+//                  }
+//                  if(actionEvent.getSource()==home.getLISTEMP()){
+//                      ControllerListHotEmp cE= new ControllerListHotEmp();
+//                        cE.contol();
+//                  }
+//                  if(actionEvent.getSource()==home.getADDSUITES()){  
+//                      ControllerAddSuite c= new ControllerAddSuite();
+//                     c.contol();
+//                  }
+//                  
+//                  if(actionEvent.getSource()==home.getDELETESUITES()){
+//                      ControllerDeleteSuite deleteF= new ControllerDeleteSuite();
+//                        deleteF.control();
+//                  }
+//                  if(actionEvent.getSource()==home.getLISTSUITE()){
+//                      ControllerListSuites cF= new ControllerListSuites();
+//                        cF.contol();
+//                  }
+//                  if(actionEvent.getSource()==home.getADDRES()){
+//                      ControllerAddRes Ao= new ControllerAddRes();
+//                      Ao.control();
+//                      Ao.controlCombo();
+//                  }
+//                  if(actionEvent.getSource()==home.getMODIFYRES()){
+//                       ControllerModifyRes c= new ControllerModifyRes();
+//                        c.control();
+//                  }
+//                  if(actionEvent.getSource()==home.getDELETERES()){
+//                      ControllerDeleteRes deleteO= new ControllerDeleteRes();
+//                        deleteO.control();
+//                  }
                   if(actionEvent.getSource()==home.getLISTALL()){
                       ControllerListReservations cLO= new ControllerListReservations();
                          cLO.control();
@@ -154,10 +159,10 @@ public class HomePageController {
                       ControllerListReservations cLO= new ControllerListReservations();
                          cLO.control();
                   }
-                  if(actionEvent.getSource()==home.getLISTRES()){
-                     ControllerDisplayList c= new ControllerDisplayList();
-                        c.control();
-                  }
+//                  if(actionEvent.getSource()==home.getLISTRES()){
+//                     ControllerDisplayList c= new ControllerDisplayList();
+//                        c.control();
+//                  }
                   if(actionEvent.getSource()==home.getEXPORT()){
                      ControllerExport cont= new ControllerExport();
                      cont.listOrders();
@@ -180,18 +185,19 @@ public class HomePageController {
         /**
          *  ActionListener buttons
          */
-        home.gETADDEMP().addActionListener(actionListener);
-        home.getMODIFYEMP().addActionListener(actionListener);
-        home.getDELETEMP().addActionListener(actionListener);
-        home.getLISTEMP().addActionListener(actionListener);
-        home.getADDSUITES().addActionListener(actionListener);
-        home.getDELETESUITES().addActionListener(actionListener);
-        home.getLISTSUITE().addActionListener(actionListener);
-        home.getADDRES().addActionListener(actionListener);
-        home.getMODIFYRES().addActionListener(actionListener);
-        home.getDELETERES().addActionListener(actionListener);
+//        home.gETADDEMP().addActionListener(actionListener);
+//        home.getMODIFYEMP().addActionListener(actionListener);
+//        home.getDELETEMP().addActionListener(actionListener);
+//        home.getLISTEMP().addActionListener(actionListener);
+//        home.getADDSUITES().addActionListener(actionListener);
+//        home.getDELETESUITES().addActionListener(actionListener);
+//        home.getLISTSUITE().addActionListener(actionListener);
+//        home.getADDRES().addActionListener(actionListener);
+//        home.getMODIFYRES().addActionListener(actionListener);
+//        home.getDELETERES().addActionListener(actionListener);
         home.getLISTALL().addActionListener(actionListener);
         home.gETBILL().addActionListener(actionListener);
+        home.getLoginNum().addActionListener(actionListener);
        
    
         /**
@@ -209,7 +215,7 @@ public class HomePageController {
         home.getEDITBOOKINGMENU().addActionListener(actionListener);
         home.getDELETEBOOKINGMENU().addActionListener(actionListener);
         home.getLISTBOOKINGMENU().addActionListener(actionListener);
-        home.getLISTRES().addActionListener(actionListener);
+       // home.getLISTRES().addActionListener(actionListener);
         home.getEXPORT().addActionListener(actionListener);
         home.getSEARCH().addActionListener(actionListener);
         home.getPRINT().addActionListener(actionListener);

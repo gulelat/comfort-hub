@@ -31,6 +31,7 @@ public class ControllerPrintBill implements Printable{
     
      /**
      * constructor to instantiate objects
+     * creates a new print bill list
     */
     public ControllerPrintBill( ){
      listSt = new PrintBill();
@@ -38,7 +39,7 @@ public class ControllerPrintBill implements Printable{
                           
     }
      /**
-     * variable ad objects declarations
+     * declaring variables that are used to connect to the database
      */
     Connection conn=null;
     String querry;
@@ -49,7 +50,7 @@ public class ControllerPrintBill implements Printable{
     private ActionListener actionListener; 
      
     /**
-     * Method displays data on orders placed
+     * Method displays data on total bills of customers
      */
     public void showOrders(){
     try{
@@ -74,10 +75,11 @@ public class ControllerPrintBill implements Printable{
     catch(Exception e){
     JOptionPane.showMessageDialog(null,e);
     }
-    
-    }
-    
-    
+        }
+     /**
+      * method that displays a list model of the bills
+      * @return listmodel table
+      */   
     public DefaultTableModel printBill (){
        
         UIManager.put("swing.boldMetal", Boolean.FALSE);
@@ -113,20 +115,50 @@ public class ControllerPrintBill implements Printable{
                   listSt.setVisible(false);
                   
                   }
-              }
-              
+              }    
         };                
         listSt.getListButton().addActionListener(actionListener);
         listSt.getCloseButton().addActionListener(actionListener);
         listSt.getPrintButton().addActionListener(actionListener);
     }
 
-
+/**
+ * abstract method that overrides the print method
+ * @param graphics
+ * @param pageFormat
+ * @param pageIndex
+ * @return
+ * @throws PrinterException 
+ */
     @Override
     public int print(Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException {
-       graphics.drawString(data, 0,50);
-      
-        return 0;
+      graphics.drawString("LIST OF TOTAL BILLS PAID BY CLIENTS",150,20 ); 
+        try{
+        Class.forName("com.mysql.jdbc.Driver");
+        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
+        printed="SELECT * FROM bill ;" ;
+        st=conn.prepareStatement(printed);
+        st.execute("USE comfort_hub;");
+        int c=40;
+        
+        ResultSet rs= st.executeQuery(printed);
+         while(rs.next()){ 
+     
+   data =  "Name: "+ rs.getString("name") + "   " + "Unit Price Of Room: " + rs.getString("priceperday")+ "   " +"Days Spent: " + rs.getString("numofdays")+
+      "   " + "Payment Mode: "+ rs.getString("pmode") + "   " + "Total: " +rs.getString("tots")+"\r\n" ;  
+     
+  graphics.drawString(data,20,c );
+   c=c+20; 
+   }
+    st.close();
+   conn.close();
+  
+    }  
+    catch(Exception e){
+    JOptionPane.showMessageDialog(null,e);
+    } 
+      System.out.println(data);
+       return 0;
     }
 }
       

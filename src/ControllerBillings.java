@@ -19,6 +19,7 @@ import javax.swing.JOptionPane;
 public class ControllerBillings {
     /**
      * declaring variables for class
+     * declaring variables that connect to the database
      */
    Connection conn=null;
    String check="";
@@ -57,7 +58,7 @@ public class ControllerBillings {
     
       
     /**
-     * Method to add flights
+     * Method to add bills of customers
      */
     public void addBill(){
     try{

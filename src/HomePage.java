@@ -26,27 +26,14 @@ public class HomePage extends javax.swing.JFrame {
      * @return ADDEMP, ADDRES, ADDSUITES, DELETEMP,DELETERES,DELETESUITES,
      * EXPORT,LISTALL,LISTEMP,LISTRES,LISTSUITE,MODIFYEMP,MODIFYRES,SEARCH
      */
-     public JButton gETADDEMP(){
-        return ADDEMP;
+     public JButton getLoginNum(){
+        return login;
     }
       public JButton gETBILL(){
         return BILL;
     }
-    public JButton getADDRES(){
-        return ADDRES;
-    }
-    public JButton getADDSUITES(){
-        return ADDSUITES;
-    }
-    public JButton getDELETEMP(){
-        return DELETEMP;
-    }
-    public JButton getDELETERES(){
-        return DELETERES;
-    }
-    public JButton getDELETESUITES(){
-        return DELETESUITES;
-    }
+    
+    
     public JButton getEXPORT(){
         return EXPORT;
     }
@@ -54,21 +41,7 @@ public class HomePage extends javax.swing.JFrame {
     public JButton getLISTALL(){
         return LISTALL;
     }
-    public JButton getLISTEMP(){
-        return LISTEMP;
-    }
-    public JButton getLISTRES(){
-        return LISTRES;
-    }
-    public JButton getLISTSUITE(){
-        return LISTSUITE;
-    }
-    public JButton getMODIFYEMP(){
-        return MODIFYEMP;
-    }
-    public JButton getMODIFYRES(){
-        return MODIFYRES;
-    }
+  
     public JButton getSEARCH(){
         return SEARCH;
     }
@@ -132,25 +105,12 @@ public class HomePage extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        ADDEMP = new javax.swing.JButton();
-        MODIFYEMP = new javax.swing.JButton();
-        DELETEMP = new javax.swing.JButton();
-        LISTEMP = new javax.swing.JButton();
-        ADDSUITES = new javax.swing.JButton();
-        DELETESUITES = new javax.swing.JButton();
-        LISTSUITE = new javax.swing.JButton();
-        ADDRES = new javax.swing.JButton();
-        MODIFYRES = new javax.swing.JButton();
-        DELETERES = new javax.swing.JButton();
-        LISTRES = new javax.swing.JButton();
         EXPORT = new javax.swing.JButton();
         SEARCH = new javax.swing.JButton();
         LISTALL = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         BILL = new javax.swing.JButton();
+        login = new javax.swing.JButton();
         menubar = new javax.swing.JMenuBar();
         ADDEMPMENU = new javax.swing.JMenu();
         ADDING = new javax.swing.JMenuItem();
@@ -174,37 +134,6 @@ public class HomePage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setForeground(new java.awt.Color(153, 51, 0));
-        jLabel1.setText("EMPLOYEES");
-
-        jLabel2.setForeground(new java.awt.Color(153, 51, 0));
-        jLabel2.setText("ROOM");
-
-        jLabel3.setForeground(new java.awt.Color(153, 51, 0));
-        jLabel3.setText("RESERVATIONS");
-
-        ADDEMP.setText("ADD");
-
-        MODIFYEMP.setText("MODIFY");
-
-        DELETEMP.setText("DELETE");
-
-        LISTEMP.setText("LIST");
-
-        ADDSUITES.setText("ADD");
-
-        DELETESUITES.setText("DELETE");
-
-        LISTSUITE.setText("LIST");
-
-        ADDRES.setText("ADD");
-
-        MODIFYRES.setText("MODIFY");
-
-        DELETERES.setText("DELETE");
-
-        LISTRES.setText("LIST");
-
         EXPORT.setText("EXPORT");
 
         SEARCH.setText("SEARCH");
@@ -214,6 +143,8 @@ public class HomePage extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Documents\\NetBeansProjects\\comfort-hub\\homepage.jpg")); // NOI18N
 
         BILL.setText("BILL");
+
+        login.setText("DAILY LOG INS");
 
         menubar.setBackground(new java.awt.Color(153, 102, 0));
         menubar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 102, 0)));
@@ -266,7 +197,7 @@ public class HomePage extends javax.swing.JFrame {
 
         BillMenu.setText("Billings");
 
-        CheckBill.setText("CheckBill");
+        CheckBill.setText("Prepare Bill");
         BillMenu.add(CheckBill);
 
         print.setText("Print Bill");
@@ -280,116 +211,37 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(152, 152, 152))
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(139, 139, 139)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LISTRES, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MODIFYRES, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(102, 102, 102)
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(55, 55, 55))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(25, 25, 25)
-                                                .addComponent(ADDEMP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(124, 124, 124)))
-                                        .addComponent(ADDSUITES, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(SEARCH, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(EXPORT, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(MODIFYEMP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(LISTEMP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(DELETEMP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(124, 124, 124)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(LISTSUITE, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(DELETESUITES, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(BILL, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(80, 80, 80)
-                                        .addComponent(ADDRES, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(DELETERES, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(67, 67, 67)
-                                        .addComponent(LISTALL, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(EXPORT, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SEARCH, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LISTALL, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BILL, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(SEARCH)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ADDRES)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(ADDEMP)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MODIFYEMP)
-                                .addGap(11, 11, 11))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ADDSUITES)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(DELETESUITES)
-                                    .addComponent(MODIFYRES))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LISTSUITE)
-                            .addComponent(DELETERES))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LISTRES))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(BILL))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DELETEMP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LISTEMP)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LISTALL)
-                    .addComponent(EXPORT)
-                    .addComponent(SEARCH))
-                .addGap(40, 40, 40))
+                .addComponent(EXPORT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LISTALL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BILL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(login)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -432,42 +284,29 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem ADDBOOKINGMENU;
-    private javax.swing.JButton ADDEMP;
     private javax.swing.JMenu ADDEMPMENU;
     private javax.swing.JMenuItem ADDING;
-    private javax.swing.JButton ADDRES;
     private javax.swing.JMenuItem ADDROOMMENU;
-    private javax.swing.JButton ADDSUITES;
     private javax.swing.JButton BILL;
     private javax.swing.JMenu BillMenu;
     private javax.swing.JMenuItem CheckBill;
     private javax.swing.JMenuItem DELETEBOOKINGMENU;
     private javax.swing.JMenuItem DELETEEMPMENU;
-    private javax.swing.JButton DELETEMP;
-    private javax.swing.JButton DELETERES;
     private javax.swing.JMenuItem DELETEROOMMENU;
-    private javax.swing.JButton DELETESUITES;
     private javax.swing.JMenuItem EDITBOOKINGMENU;
     private javax.swing.JMenuItem EDITEMPMENU;
     private javax.swing.JButton EXPORT;
     private javax.swing.JButton LISTALL;
     private javax.swing.JMenuItem LISTBOOKINGMENU;
-    private javax.swing.JButton LISTEMP;
     private javax.swing.JMenuItem LISTEMPMENU;
-    private javax.swing.JButton LISTRES;
     private javax.swing.JMenuItem LISTROOMMENU;
-    private javax.swing.JButton LISTSUITE;
-    private javax.swing.JButton MODIFYEMP;
-    private javax.swing.JButton MODIFYRES;
     private javax.swing.JMenu RESMENU;
     private javax.swing.JButton SEARCH;
     private javax.swing.JMenu SUITEMENU;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton login;
     private javax.swing.JMenuBar menubar;
     private javax.swing.JMenuItem print;
     // End of variables declaration//GEN-END:variables

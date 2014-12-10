@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/ControllerListReservations.java</file>
+            <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/HomePage.java</file>
+            <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/ControllerBillings.java</file>
             <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/ControllerPrintBill.java</file>
+            <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/Billings.java</file>
             <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/PrintBill.java</file>
-            <file>file:/C:/Users/Dorothy/Documents/NetBeansProjects/comfort-hub/src/ListReservations.java</file>
         </group>
     </open-files>
 </project-private>

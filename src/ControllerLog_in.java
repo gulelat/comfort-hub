@@ -5,6 +5,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /*
@@ -25,7 +29,9 @@ public class ControllerLog_in {
     Statement st=null;
     public log_in login;
     private ActionListener actionListener;  
+   
     
+   
     /**
      * constructor to create a new form
      */
@@ -46,6 +52,7 @@ public class ControllerLog_in {
         st=conn.prepareStatement(querry);
         st.execute("USE comfort_hub;");
 
+       
         ResultSet rs= st.executeQuery(querry);
         if (!rs.next() ) {
                 JOptionPane.showMessageDialog(null," Invalid Username or Password ");
@@ -68,6 +75,8 @@ public class ControllerLog_in {
     JOptionPane.showMessageDialog(null,e);
     }
      }
+     
+    
      /**
       * method to perform actions of events
       */

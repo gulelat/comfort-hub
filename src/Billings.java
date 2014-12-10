@@ -25,7 +25,7 @@ public class Billings extends javax.swing.JFrame {
     
     /**
      * 
-     * @return save, close, day cost, cash, days, total,client
+     * @return save, close, day cost, cash, days, total,tots,search
          */
     public JButton getSaveButton(){
      return save;
