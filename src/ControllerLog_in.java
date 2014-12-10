@@ -17,20 +17,27 @@ import javax.swing.JOptionPane;
  * @author Dorothy
  */
 public class ControllerLog_in {
-    
+    /**
+     * method to declare and instantiate variables
+     */
     Connection conn=null;
     String querry;
     Statement st=null;
     public log_in login;
     private ActionListener actionListener;  
     
-    
+    /**
+     * constructor to create a new form
+     */
      public ControllerLog_in( ){
         login = new log_in();
         login.setVisible(true);
                           
     }
      
+     /**
+      * method to display employees data
+      */
      public void showEmployee(){
     try{
         Class.forName("com.mysql.jdbc.Driver");
@@ -61,7 +68,9 @@ public class ControllerLog_in {
     JOptionPane.showMessageDialog(null,e);
     }
      }
-     
+     /**
+      * method to perform actions of events
+      */
       public void control(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  

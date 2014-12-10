@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /*
@@ -25,7 +26,8 @@ public class ModifyRes extends javax.swing.JFrame {
      
     /**
      * 
-     * @return save_button, close_button & search_button
+     * @return save, close,searchNum,PNATION,PNUM,PNAME,PRICE,RNUM,ROOMTYPE
+     * TIN,TOUT,search
      */
     public JButton getSaveButton(){
         return save;
@@ -52,7 +54,7 @@ public class ModifyRes extends javax.swing.JFrame {
     public JTextField getRNum(){
         return RNUM;
     }
-    public JTextField getRoomType(){
+    public JComboBox getRoomType(){
         return ROOMTYPE;
     }
     public JTextField getTIMEIN(){
@@ -91,18 +93,18 @@ public class ModifyRes extends javax.swing.JFrame {
         PNAME = new javax.swing.JTextField();
         PNUM = new javax.swing.JTextField();
         PNATION = new javax.swing.JTextField();
-        ROOMTYPE = new javax.swing.JTextField();
         RNUM = new javax.swing.JTextField();
         PRICE = new javax.swing.JTextField();
         TIN = new javax.swing.JTextField();
         TOUT = new javax.swing.JTextField();
+        ROOMTYPE = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("ENTER PHONE NUMBER TO MODIFY");
 
-        searchNum.setBackground(new java.awt.Color(153, 102, 0));
+        searchNum.setBackground(new java.awt.Color(0, 0, 0));
         searchNum.setForeground(new java.awt.Color(153, 102, 0));
         searchNum.setText("SEARCH");
 
@@ -130,57 +132,61 @@ public class ModifyRes extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(153, 102, 0));
         jLabel9.setText("TIME OUT");
 
-        save.setBackground(new java.awt.Color(153, 102, 0));
+        save.setBackground(new java.awt.Color(0, 0, 0));
         save.setForeground(new java.awt.Color(153, 102, 0));
         save.setText("SAVE");
 
-        close.setBackground(new java.awt.Color(153, 102, 0));
+        close.setBackground(new java.awt.Color(0, 0, 0));
         close.setForeground(new java.awt.Color(153, 102, 0));
         close.setText("CLOSE");
+
+        ROOMTYPE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Double", "Queens", "Kings", "Suite" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addGap(51, 51, 51)
-                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
-                .addComponent(searchNum)
-                .addGap(19, 19, 19))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2))))
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(PNAME, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                    .addComponent(PNUM)
-                    .addComponent(PNATION)
-                    .addComponent(ROOMTYPE)
-                    .addComponent(RNUM)
-                    .addComponent(PRICE)
-                    .addComponent(TIN)
-                    .addComponent(TOUT))
-                .addGap(68, 68, 68))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(save)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(close)
                 .addGap(121, 121, 121))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(20, 20, 20)
+                        .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addComponent(searchNum)
+                        .addGap(19, 19, 19))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(221, 221, 221)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PNAME, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                            .addComponent(PNUM)
+                            .addComponent(PNATION)
+                            .addComponent(RNUM)
+                            .addComponent(PRICE)
+                            .addComponent(TIN)
+                            .addComponent(TOUT)
+                            .addComponent(ROOMTYPE, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(68, 68, 68))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +209,7 @@ public class ModifyRes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(PNATION, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(ROOMTYPE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -223,7 +229,7 @@ public class ModifyRes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
                     .addComponent(TOUT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
                     .addComponent(close))
@@ -274,7 +280,7 @@ public class ModifyRes extends javax.swing.JFrame {
     private javax.swing.JTextField PNUM;
     private javax.swing.JTextField PRICE;
     private javax.swing.JTextField RNUM;
-    private javax.swing.JTextField ROOMTYPE;
+    private javax.swing.JComboBox ROOMTYPE;
     private javax.swing.JTextField TIN;
     private javax.swing.JTextField TOUT;
     private javax.swing.JButton close;

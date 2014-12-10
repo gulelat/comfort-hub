@@ -23,7 +23,7 @@ public class DeleteSuite extends javax.swing.JFrame {
     
     /**
      * 
-     * @return jButton1
+     * @return delete
      */
     public JButton getDeleteButton(){
            System.out.println("Delete button clicked");
@@ -32,7 +32,7 @@ public class DeleteSuite extends javax.swing.JFrame {
     
     /**
      * 
-     * @return jButton2
+     * @return close
      */
     public JButton getCloseButton(){
         System.out.println("close button clicked");

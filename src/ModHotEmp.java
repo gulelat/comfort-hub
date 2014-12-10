@@ -38,7 +38,7 @@ public class ModHotEmp extends javax.swing.JFrame {
     
      /**
      * 
-     * @return id_field, password_field, name_field, mail_field, search_field
+     * @return ID, password, name, email, takeId
      */
     public JTextField getIdField(){
         return ID;

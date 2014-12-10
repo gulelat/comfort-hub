@@ -17,7 +17,7 @@ public class ListHotEmp extends javax.swing.JFrame {
     DefaultTableModel table= new DefaultTableModel(columns,0);
 
     /**
-     * Creates new form ListHotEmp
+     * Constructor that creates new form ListHotEmp
      */
     public ListHotEmp() {
         getContentPane().setBackground(Color.BLACK);
@@ -26,7 +26,7 @@ public class ListHotEmp extends javax.swing.JFrame {
     
     /**
      * 
-     * @return table, jButton & jButton
+     * @return table, LIST & CLOSE
      */
     public DefaultTableModel getEmpTable (){
          return table;
@@ -54,6 +54,7 @@ public class ListHotEmp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTable1.setBackground(new java.awt.Color(153, 102, 0));
         jTable1.setModel(table);
         jScrollPane1.setViewportView(jTable1);
 
@@ -67,16 +68,12 @@ public class ListHotEmp extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LIST)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CLOSE)
-                        .addContainerGap())))
+                    .addComponent(LIST)
+                    .addComponent(CLOSE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

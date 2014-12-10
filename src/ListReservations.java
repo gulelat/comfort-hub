@@ -12,11 +12,17 @@ import javax.swing.table.DefaultTableModel;
  * @author Dorothy
  */
 public class ListReservations extends javax.swing.JFrame {
+    
+    /**
+     * An array of string to store orders Name, roomNo, phoneNo, Price, 
+     * roomtype,  TimeOut, Arrival Time"
+     */
     String[] columns = {"pName","roomNo","nationality", "phoneNO","roomType","price","TimeIn","TimeOut"};
     DefaultTableModel table= new DefaultTableModel(columns,0);
     
     /**
-     * Creates new form ListOrders
+     * 
+     * @return table
      */
     public DefaultTableModel getTable (){
         System.out.println("Table was created");
@@ -25,7 +31,7 @@ public class ListReservations extends javax.swing.JFrame {
     
      /**
      * 
-     * @return jButton1, jButton3
+     * @return list, close
      */
     public JButton getListButton(){
          return list;
@@ -35,7 +41,7 @@ public class ListReservations extends javax.swing.JFrame {
     }
 
     /**
-     * Creates new form ListReservations
+     * Constructor that creates new form ListReservations
      */
     public ListReservations() {
         initComponents();
@@ -57,6 +63,7 @@ public class ListReservations extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTable1.setBackground(new java.awt.Color(153, 102, 0));
         jTable1.setModel(table);
         jScrollPane1.setViewportView(jTable1);
 

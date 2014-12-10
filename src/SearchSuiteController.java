@@ -16,7 +16,9 @@ import javax.swing.JOptionPane;
  * @author Dorothy
  */
 public class SearchSuiteController {
-   
+   /**
+    * declaring variables in the class
+    */
         Connection conn = null;
         PreparedStatement p = null;
         ResultSet rs = null;
@@ -27,14 +29,19 @@ public class SearchSuiteController {
     
     private ActionListener actionListener;
     
-    
+   /**
+    * 
+    * @param v 
+    */ 
     public SearchSuiteController(SearchSuite v){
         view1 = v;
         view1.setVisible(true);
     }
     
     
-    
+   /**
+    * method to connect to the database
+    */ 
     public void control(){
         try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -78,7 +85,9 @@ public class SearchSuiteController {
     }
     
 
-    
+    /**
+     * method to show search employee form
+     */
     public void showNewForm1() {
 
         SearchEmployee view = new SearchEmployee();
@@ -87,7 +96,9 @@ public class SearchSuiteController {
         controller.control();
     }
 
-
+/**
+ * method to show search reservations form
+ */
      public void showNewForm2(){
          
             SearchReservations view2= new SearchReservations();
@@ -98,13 +109,15 @@ public class SearchSuiteController {
 
     
      
-     
+    /**
+     * method to show search suite form
+     */ 
        public void searchSuite(){
            
             try{
                    Class.forName("com.mysql.jdbc.Driver").newInstance();
                     conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
-                    //System.out.println("passes");
+                    
         }catch (Exception e){
             System.out.println("exception in control "+e.toString());
             System.out.println(" NO PASSWORD");
@@ -117,38 +130,9 @@ public class SearchSuiteController {
             JOptionPane.showMessageDialog(null,"please fill search field");
         }
          
-         if(view1.getsearchCombo().getSelectedIndex()==0){
-              view1.getmsgLabel().setText("Enter suite name");
-            //DefaultTableModel tbl = new DefaultTableModel (colname, 0);
-            try{
-                    
-                    p = conn.prepareStatement("SELECT * FROM suites  where sName=?");                    
-                    p.setString(1, view1.getSearchSuiteText().getText());
-                    rs = p.executeQuery();
-                    //this clears table
-                 view1.getModel().setRowCount(0);
-                    
-                while(rs.next()){
-                   // System.out.println("inside");
-                   view1.getModel().addRow(new String[]{
-                   rs.getString("sName"),
-                   rs.getString("sNum"),
-                   rs.getString("type"),
-                   rs.getString("sPrice"),
-                   rs.getString("availability"),  
-                   });
-                }
-               
-                }catch(Exception e){
-                    System.out.println("Exception "+e.getMessage());
-                    JOptionPane.showMessageDialog(null, e.getMessage());
-                    JOptionPane.showMessageDialog(null, "entry cannot be found");
-                }
-            
-         }
-        
+       
          
-         if(view1.getsearchCombo().getSelectedIndex()==1){
+         if(view1.getsearchCombo().getSelectedIndex()==0){
              view1.getmsgLabel().setText("Enter from");
            
             try{
@@ -163,7 +147,7 @@ public class SearchSuiteController {
                     
                 while(rs.next()){
                    view1.getModel().addRow(new String[]{
-                   rs.getString("sName"),
+                   
                    rs.getString("sNum"),
                    rs.getString("type"),
                    rs.getString("sPrice"),
@@ -180,9 +164,8 @@ public class SearchSuiteController {
          
          
          
-         if(view1.getsearchCombo().getSelectedIndex()==2){
-            //view1.getmsgLabel().setText("HR, FIN,IT, BB, SC, Foods, ENG, CD,LAB, QTY, SFTY");
-            //DefaultTableModel tbl = new DefaultTableModel (colname, 0);
+         if(view1.getsearchCombo().getSelectedIndex()==1){
+            
             try{
                     p = conn.prepareStatement("SELECT * FROM suites  where type=?");
                     p.setString(1, view1.getSearchSuiteText().getText());
@@ -194,7 +177,7 @@ public class SearchSuiteController {
                     
                 while(rs.next()){
                    view1.getModel().addRow(new String[]{
-                   rs.getString("sName"),
+                   
                    rs.getString("sNum"),
                    rs.getString("type"),
                    rs.getString("sPrice"),
@@ -209,7 +192,7 @@ public class SearchSuiteController {
             
          }
          
-         if(view1.getsearchCombo().getSelectedIndex()==3){
+         if(view1.getsearchCombo().getSelectedIndex()==2){
             //DefaultTableModel tbl = new DefaultTableModel (colname, 0);
             try{
                     p = conn.prepareStatement("SELECT * FROM suites  where sPrice=?");
@@ -222,7 +205,7 @@ public class SearchSuiteController {
                     
                 while(rs.next()){
                   view1.getModel().addRow(new String[]{
-                   rs.getString("sName"),
+                   
                    rs.getString("sNum"),
                    rs.getString("type"),
                    rs.getString("sPrice"),
@@ -239,7 +222,7 @@ public class SearchSuiteController {
            
      
         
-         if(view1.getsearchCombo().getSelectedIndex()==4){
+         if(view1.getsearchCombo().getSelectedIndex()==3){
             //DefaultTableModel tbl = new DefaultTableModel (colname, 0);
             try{
                     p = conn.prepareStatement("SELECT * FROM suites  where availability=?");
@@ -252,14 +235,14 @@ public class SearchSuiteController {
                     
                 while(rs.next()){
                    view1.getModel().addRow(new String[]{
-                   rs.getString("sName"),
+                  
                    rs.getString("sNum"),
                    rs.getString("type"),
                    rs.getString("sPrice"),
                    rs.getString("availability"),
                    });
                 }
-                //flightTable.setModel(tbl);
+               
                 }catch(Exception e){
                      JOptionPane.showMessageDialog(null, e.getMessage());
                      JOptionPane.showMessageDialog(null, "entry cannot be found");

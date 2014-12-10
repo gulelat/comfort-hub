@@ -23,7 +23,7 @@ public class DeleteHotEmp extends javax.swing.JFrame {
     
      /**
      * 
-     * @return jButton1
+     * @return delete
      */
      public JButton getDeleteButton(){
         System.out.println("Delete button clicked");
@@ -32,7 +32,7 @@ public class DeleteHotEmp extends javax.swing.JFrame {
      
      /**
       * 
-      * @return jButton2
+      * @return close
       */
     public JButton getCloseButton(){
         System.out.println("close button clicked");
@@ -89,11 +89,11 @@ public class DeleteHotEmp extends javax.swing.JFrame {
                 .addContainerGap(89, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(TAKEID, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(120, 120, 120))))
+                        .addGap(120, 120, 120))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

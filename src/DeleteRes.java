@@ -23,14 +23,14 @@ public class DeleteRes extends javax.swing.JFrame {
     
     /**
      * 
-     * @return deleteButton
+     * @return delete
      */
     public JButton getDeleteButton(){
         return delete;
     }
     /**
      * 
-     * @return cloeButton
+     * @return close
      */
     public JButton getCloseButton(){
         return close;

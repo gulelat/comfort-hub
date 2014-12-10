@@ -25,7 +25,10 @@ public class log_in extends javax.swing.JFrame {
         getContentPane().setBackground(Color.BLACK);
         initComponents();
     }
-   
+   /**
+    * 
+    * @return ok,visitor,password,username
+    */
     public JButton getLoginButton(){
     return ok;
     }

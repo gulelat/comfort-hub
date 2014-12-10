@@ -24,7 +24,7 @@ public class SearchReservations extends javax.swing.JFrame {
     
     
     /**
-     * Creates new form SEARCH_RESERVATION
+     * Declare variables and creates columns for table
      */
     
      Connection conn = null;
@@ -103,6 +103,7 @@ public class SearchReservations extends javax.swing.JFrame {
             }
         });
 
+        reservationTable.setBackground(new java.awt.Color(153, 102, 0));
         reservationTable.setModel(dm);
         jScrollPane1.setViewportView(reservationTable);
 
@@ -138,21 +139,21 @@ public class SearchReservations extends javax.swing.JFrame {
                         .addGap(68, 68, 68)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(msgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(180, 180, 180)
                         .addComponent(CLOSEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(searchCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SearchReservationText, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SearchButtonReservation)))
-                .addContainerGap())
+                        .addComponent(SearchButtonReservation))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(msgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,8 +167,8 @@ public class SearchReservations extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(msgLabel)
                 .addGap(14, 14, 14)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(131, 131, 131)
                 .addComponent(CLOSEButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -192,7 +193,11 @@ public class SearchReservations extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchComboActionPerformed
 
-      
+ /**
+  * 
+  * @return CLOSEButton,SearchButtonReservation,SearchReservationText,searchCombo,
+  * msgLabel,reservationTable,dm
+  */     
 public JButton getCLOSEButton(){
        return  CLOSEButton;
     }

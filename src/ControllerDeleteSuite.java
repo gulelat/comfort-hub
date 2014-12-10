@@ -37,9 +37,9 @@ public class ControllerDeleteSuite {
     }
     
      /**
-    * Method to delete  flight
+    * Method to delete  suite
     */
-    public void deleteFlight(){
+    public void deleteSuite(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
         conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
@@ -64,7 +64,7 @@ public class ControllerDeleteSuite {
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  
                   if(actionEvent.getSource()==deleteSt.getDeleteButton()){
-                        deleteFlight();
+                        deleteSuite();
                   }
                   if(actionEvent.getSource()==deleteSt.getCloseButton()){
                         deleteSt.setVisible(false);

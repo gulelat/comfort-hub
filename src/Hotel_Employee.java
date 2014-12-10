@@ -15,13 +15,16 @@ import javax.swing.JTextField;
 public class Hotel_Employee extends javax.swing.JFrame {
 
     /**
-     * Creates new form Hotel_Employee
+     * Constructor that creates new form Hotel_Employee
      */
     public Hotel_Employee() {
         getContentPane().setBackground(Color.BLACK);
         initComponents();
     }
-    
+    /**
+     * 
+     * @return SAVE,EXIT,TAKEID,TAKENAME, TAKEPASS,TAKEMAIL 
+     */
      public JButton getSAVE(){
      return SAVE;
      }

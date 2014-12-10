@@ -16,18 +16,26 @@ import javax.swing.JOptionPane;
  * @author Dorothy
  */
 public class SearchEmployeeController {
-    
+    /**
+     * declaring variables used in class
+     */
      Connection conn = null;
     PreparedStatement p = null;
     ResultSet rs = null;
     private SearchEmployee view;
     private ActionListener actionListener;
-
+/**
+ * 
+ * @param v 
+ */
     public SearchEmployeeController(SearchEmployee v) {
         view = v;
         view.setVisible(true);
     }
 
+    /**
+     * method to connect to database
+     */
     public void control() {
 
         try {
@@ -57,18 +65,21 @@ public class SearchEmployeeController {
         view.getSEARCHButton().addActionListener(actionListener);
 
     }
-
+/**
+ * method that displays new suite form
+ */
     public void showNewForm() {
         new SearchSuite().setVisible(true);
     }
-
+/**
+ * method to select form of searching
+ */
     public void Employee() {
 
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conn = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull", "root", "root");
-            //System.out.println("passes");
-        } catch (Exception e) {
+            } catch (Exception e) {
             System.out.println("exception in control " + e.toString());
             System.out.println(" NO PASSWORD EMP");
         }

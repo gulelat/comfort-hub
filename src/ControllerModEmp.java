@@ -28,7 +28,7 @@ public class ControllerModEmp {
     private ActionListener actionListener;
     
      /**
-     * Constructor
+     * Constructor that creates a new hotel employee
      */
     public ControllerModEmp() {
         modEmp = new ModHotEmp();
@@ -39,7 +39,7 @@ public class ControllerModEmp {
   
     
        /**
-     * Method to update list
+     * Method to update list of employees
      */
     public void setList() {
         int ky;
@@ -68,7 +68,7 @@ public class ControllerModEmp {
     
     
     /**
-     * Method to display available flights
+     * Method to display hotel employees
      */
     public void listEmps() {
 

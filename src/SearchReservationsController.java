@@ -17,7 +17,9 @@ import javax.swing.JOptionPane;
  */
 public class SearchReservationsController {
    
-    
+    /**
+     * declaring variables in the class
+     */
     
         Connection conn = null;
         PreparedStatement p = null;
@@ -28,14 +30,19 @@ public class SearchReservationsController {
     
     private ActionListener actionListener;
     
-    
+    /**
+     * 
+     * @param v 
+     */
     public SearchReservationsController(SearchReservations v){
         view2 = v;
         view2.setVisible(true);
     }
     
     
-    
+    /**
+     * method to connect to the database
+     */
     public void control(){
         
           try{

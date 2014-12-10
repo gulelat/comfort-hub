@@ -50,7 +50,7 @@ public class ControllerListSuites {
         ResultSet rs= st.executeQuery(querry);
    while(rs.next()){
   
-   Object[] temp = {rs.getString("sName"), rs.getString("sNum"),rs.getString("type"),rs.getString("sPrice"),
+   Object[] temp = { rs.getString("sNum"),rs.getString("type"),rs.getString("sPrice"),
                     rs.getString("availability")};
    listSt.getTable().addRow(temp);
    }

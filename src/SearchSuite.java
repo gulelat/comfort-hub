@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 public class SearchSuite extends javax.swing.JFrame {
 
     /**
-     * Creates new form SearchSuite
+     * Declaring variables in the class and creating the table columns
      */
     
     
@@ -30,10 +30,13 @@ public class SearchSuite extends javax.swing.JFrame {
         PreparedStatement p = null;
         ResultSet rs = null;
         
-        String[] colname = {"sName", "sNum", "type", "sPrice", "availability"};
-        String [] searchOptions = {"sName","sNum", "type", "sPrice",  "availability"};
+        String[] colname = { "sNum", "type", "sPrice", "availability"};
+        String [] searchOptions = {"sNum", "type", "sPrice",  "availability"};
         DefaultTableModel dm = new DefaultTableModel(colname, 5);
         
+    /**
+     * Creates new form SearchSuite
+     */
         public SearchSuite() {
         initComponents();
 
@@ -43,7 +46,7 @@ public class SearchSuite extends javax.swing.JFrame {
       
         suiteTable.setModel(dm);
         dm.setColumnIdentifiers(colname);
-        msgLabel.setText("Select either sName, sNum,type, sPrice or availability");
+        msgLabel.setText("Select either  sNum,type, sPrice or availability");
         
         
         for(int i=0; i<searchOptions.length;i++){       //add items to combobox
@@ -85,10 +88,11 @@ public class SearchSuite extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         SEARCHButtonReservation = new javax.swing.JButton();
         SEARCHButtonEmployee = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        suiteTable.setForeground(new java.awt.Color(0, 102, 102));
+        suiteTable.setBackground(new java.awt.Color(153, 102, 0));
         suiteTable.setModel(dm);
         jScrollPane1.setViewportView(suiteTable);
 
@@ -113,8 +117,6 @@ public class SearchSuite extends javax.swing.JFrame {
                 SearchSuitetTextActionPerformed(evt);
             }
         });
-
-        msgLabel.setText("jLabel6");
 
         SearchButtonSuite.setBackground(new java.awt.Color(153, 102, 0));
         SearchButtonSuite.setText("SEARCH");
@@ -143,59 +145,69 @@ public class SearchSuite extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Documents\\NetBeansProjects\\comfort-hub\\hot.jpg")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(123, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(searchCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(SearchSuitetText, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(SearchButtonSuite))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(SEARCHButtonEmployee, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(SEARCHButtonReservation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(142, 142, 142))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(CLOSEButton)
-                        .addGap(204, 204, 204))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(msgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(msgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(115, 115, 115)
+                                .addComponent(SEARCHButtonReservation)
+                                .addGap(68, 68, 68)
+                                .addComponent(SEARCHButtonEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 26, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(93, 93, 93)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(searchCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(SearchSuitetText, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45)
+                        .addComponent(SearchButtonSuite))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CLOSEButton)
+                .addGap(259, 259, 259))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(88, 88, 88)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
                     .addComponent(searchCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchSuitetText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SearchButtonSuite)
-                    .addComponent(jLabel3))
-                .addGap(33, 33, 33)
-                .addComponent(SEARCHButtonReservation)
-                .addGap(18, 18, 18)
-                .addComponent(SEARCHButtonEmployee)
-                .addGap(35, 35, 35)
+                    .addComponent(SearchButtonSuite))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SEARCHButtonReservation)
+                    .addComponent(SEARCHButtonEmployee))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(msgLabel)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(CLOSEButton)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -225,7 +237,11 @@ public class SearchSuite extends javax.swing.JFrame {
     private void SEARCHButtonEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SEARCHButtonEmployeeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SEARCHButtonEmployeeActionPerformed
-
+/**
+ * 
+ * @return CLOSEButton,SEARCHButtonEmployee,SEARCHButtonReservation,SearchButtonSuite
+ * SearchSuitetText,searchCombo,msgLabel,suiteTable,dm
+ */
    public JButton getCLOSEButton(){
        return  CLOSEButton;
     }
@@ -313,6 +329,7 @@ return dm;
     private javax.swing.JButton SEARCHButtonReservation;
     private javax.swing.JButton SearchButtonSuite;
     private javax.swing.JTextField SearchSuitetText;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel msgLabel;

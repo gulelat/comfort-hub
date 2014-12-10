@@ -25,8 +25,8 @@ public class AddRes extends javax.swing.JFrame {
     
     /**
      * 
-     * @return jButto1, jButton2, name_field, jTextField4, jTextFiled3, jTextField1, jComboBox1, 
-     * jTextField5, jTextField6, jTextField =7, jTextFiled8, jTextField9
+     * @return save, close, Pname, Pnation, Rprice, Pnum, jComboBox1, 
+     * Rtype, in, out, Rtype
      */
     public JButton getSaveButton(){
     return save;
@@ -50,7 +50,7 @@ public class AddRes extends javax.swing.JFrame {
         return jComboBox1;
     }
     
-    public JTextField getRoomType(){
+    public JComboBox getRoomType(){
         return Rtype;
     }
    
@@ -78,7 +78,6 @@ public class AddRes extends javax.swing.JFrame {
         Pnation = new javax.swing.JTextField();
         type = new javax.swing.JLabel();
         Rnum = new javax.swing.JLabel();
-        Rtype = new javax.swing.JTextField();
         price = new javax.swing.JLabel();
         Rprice = new javax.swing.JTextField();
         timeIn = new javax.swing.JLabel();
@@ -90,6 +89,7 @@ public class AddRes extends javax.swing.JFrame {
         close = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        Rtype = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,6 +125,8 @@ public class AddRes extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Documents\\NetBeansProjects\\comfort-hub\\res.jpg")); // NOI18N
 
+        Rtype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Double", "Queens", "Kings", "Suite" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -155,11 +157,11 @@ public class AddRes extends javax.swing.JFrame {
                             .addComponent(in)
                             .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(out, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Rtype)
                             .addComponent(Pnation)
                             .addComponent(Pnum)
                             .addComponent(Pname)
-                            .addComponent(close, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))))
+                            .addComponent(close, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                            .addComponent(Rtype, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -259,7 +261,7 @@ public class AddRes extends javax.swing.JFrame {
     private javax.swing.JTextField Pnum;
     private javax.swing.JLabel Rnum;
     private javax.swing.JTextField Rprice;
-    private javax.swing.JTextField Rtype;
+    private javax.swing.JComboBox Rtype;
     private javax.swing.JButton close;
     private javax.swing.JTextField in;
     private javax.swing.JComboBox jComboBox1;

@@ -55,7 +55,9 @@ public class ControllerListHotEmp {
     }
 
     }
-    
+    /**
+     * method to get events on actions
+     */
      public void contol(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  

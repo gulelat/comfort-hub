@@ -24,6 +24,7 @@ public class ControllerAddRes {
      */
     Connection conn=null;
     String data="";
+    String typ="";
     String querry;
     Statement st=null;
     public AddRes EnterOrder;
@@ -40,14 +41,17 @@ public class ControllerAddRes {
     
     /**
      * 
-     * @return data
+     * @return data,typ
      */
-    public String getClickedFlight(){
+    public String getClickedSuite(){
         return data;
+    }
+     public String getClickedType(){
+        return typ;
     }
     
     /**
-     * Method to display available flights
+     * Method to display available suites
      */
      public void showSuites(){
          
@@ -88,7 +92,7 @@ public class ControllerAddRes {
     p.setString(2, (EnterOrder.getRnum().getSelectedItem()).toString());
     p.setString(3, EnterOrder.getPNation().getText());
     p.setString(4, EnterOrder.getPhoneNo().getText());
-    p.setString(5, EnterOrder.getRoomType().getText());
+    p.setString(5, (EnterOrder.getRoomType().getSelectedItem()).toString());
     p.setString(6, EnterOrder.getPrice().getText());
     p.setString(7, EnterOrder.getTimeIn().getText());
     p.setString(8, EnterOrder.getTimeOut().getText());
@@ -108,7 +112,7 @@ public class ControllerAddRes {
     
      /**
      * Method to get source of button clicked using action listener 
-     * and display the in combo form
+     * and display in combo form
      */
     public void controlCombo(){        
         actionListener = new ActionListener() {
@@ -118,6 +122,12 @@ public class ControllerAddRes {
                data = (EnterOrder.getRnum().getItemAt(EnterOrder.getRnum().getSelectedIndex())).toString();
                 setDetails(data);
             }
+                  else 
+                      if(EnterOrder.getRoomType().getSelectedIndex() != -1) {                     
+               data = (EnterOrder.getRoomType().getItemAt(EnterOrder.getRoomType().getSelectedIndex())).toString();
+                setDetails(typ);
+            }
+                  
               }
               
         };                
@@ -127,7 +137,7 @@ public class ControllerAddRes {
     /**
      * 
      * @param d
-     * Method to write passenger order details to database
+     * Method to write customer orders details to database
      */
      public void setDetails(String d){
     try{
@@ -166,6 +176,10 @@ public class ControllerAddRes {
                   
                   }
                   if(actionEvent.getSource()==EnterOrder.getRnum()){
+                  showSuites();
+                  
+                  }
+                  if(actionEvent.getSource()==EnterOrder.getRoomType()){
                   showSuites();
                   
                   }

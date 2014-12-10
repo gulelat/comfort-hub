@@ -42,7 +42,7 @@ public class ControllerExport {
      * Method to get destination for the data to be exported 
      */
     private void getSaveLocation() {
-   // parent component of the dialog
+   
     JFrame parentFrame = new JFrame();
  
     JFileChooser fileChooser = new JFileChooser();

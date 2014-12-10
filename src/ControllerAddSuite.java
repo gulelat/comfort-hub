@@ -20,6 +20,7 @@ import javax.swing.JOptionPane;
 public class ControllerAddSuite {
    Connection conn=null;
    String check="";
+   String type="";
     String querry;
     Statement st=null;
     public AddSuite addSt; 
@@ -34,48 +35,35 @@ public class ControllerAddSuite {
         addSt.setVisible(true);
                           
     }
-    
+    /**
+     * 
+     * @return check,type
+     */
     public String getAvail(){
         return check;
     }
+    public String getSType(){
+        return type;
+    }
     
-//     public void controlCombo(){        
-//        actionListener = new ActionListener() {
-//            
-//              public void actionPerformed(ActionEvent actionEvent) {  
-//                  if (addSt.getAvail().getSelectedItem().equals("YES")) {                     
-//               check = (addSt.getAvail().getSelectedItem()).toString();
-//             
-//            }
-//                  else
-//                        if (addSt.getAvail().getSelectedItem().equals("NO")) {                     
-//               check = (addSt.getAvail().getSelectedItem()).toString();
-//              
-//            }
-//                      
-//              }
-//              
-//        };                
-//        addSt.getAvail().addActionListener(actionListener);
-//    }
    
     
     /**
-     * Method to add flights
+     * Method to add rooms
      */
     public void addSuites(){
     try{
        Class.forName("com.mysql.jdbc.Driver");
        conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/comfort_hub?zeroDateTimeBehavior=convertToNull","root","root");
        
-        querry=("INSERT INTO suites SET sName=?,sNum=? ,type =?,sPrice =?,availability =?;");
+        querry=("INSERT INTO suites SET sNum=? ,type =?,sPrice =?,availability =?;");
         
     PreparedStatement p =conn.prepareStatement(querry);
-    p.setString(1, addSt.getSName().getText());
-    p.setString(2, addSt.getNumber().getText());
-    p.setString(3, addSt.getSType().getText());
-    p.setString(4, addSt.getPrice().getText());
-    p.setString(5, addSt.getAvail().getSelectedItem().toString());
+   
+    p.setString(1, addSt.getNumber().getText());
+    p.setString(2, addSt.getSType().getSelectedItem().toString());
+    p.setString(3, addSt.getPrice().getText());
+    p.setString(4, addSt.getAvail().getSelectedItem().toString());
     p.execute();
         
     p.close();
@@ -102,6 +90,10 @@ public class ControllerAddSuite {
                   
                   }
                   if(actionEvent.getSource()==addSt.getAvail()){
+                  addSt.setEnabled(true);
+                  
+                  }
+                  if(actionEvent.getSource()==addSt.getSType()){
                   addSt.setEnabled(true);
                   
                   }

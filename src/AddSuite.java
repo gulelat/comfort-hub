@@ -18,7 +18,7 @@ public class AddSuite extends javax.swing.JFrame {
     
 
      /**
-     * Creates new form EnterFlight
+     * Creates new form add suite
      */
     public AddSuite() {
         getContentPane().setBackground(Color.BLACK);
@@ -26,23 +26,20 @@ public class AddSuite extends javax.swing.JFrame {
     }
     /**
      * 
-     * @return jButton1, jButton2, jTextField, jTextField2, jTextField3, jTextField4, jTextField5
-     * jTextField6 & jTetField7
-     */
+     * @return save, close, Sprice, sType, number, no
+         */
     public JButton getSaveButton(){
      return save;
      }
     public JButton getCloseButton(){
      return close;
      }
-    public JTextField getSName(){
-    return Sname;
-    }
+    
     public JTextField getPrice(){
     return Sprice;
     }
-    public JTextField getSType(){
-    return Stype;
+    public JComboBox getSType(){
+    return sType;
     } 
     public JTextField getNumber(){
     return number;
@@ -64,12 +61,9 @@ public class AddSuite extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        name = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Sname = new javax.swing.JTextField();
         Sprice = new javax.swing.JTextField();
-        Stype = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         save = new javax.swing.JButton();
         close = new javax.swing.JButton();
@@ -78,14 +72,12 @@ public class AddSuite extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         no = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
+        sType = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        name.setForeground(new java.awt.Color(153, 102, 0));
-        name.setText("NAME");
-
         jLabel2.setForeground(new java.awt.Color(153, 102, 0));
-        jLabel2.setText("PRICE");
+        jLabel2.setText("PRICE per DAY");
 
         jLabel3.setForeground(new java.awt.Color(153, 102, 0));
         jLabel3.setText("TYPE");
@@ -104,6 +96,8 @@ public class AddSuite extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dorothy\\Documents\\NetBeansProjects\\comfort-hub\\SUIT.jpg")); // NOI18N
 
+        sType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single", "Double", "Queen", "King", "Suite", " " }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,8 +113,7 @@ public class AddSuite extends javax.swing.JFrame {
                         .addComponent(save)
                         .addComponent(jLabel1)
                         .addComponent(jLabel3)
-                        .addComponent(jLabel2)
-                        .addComponent(name))
+                        .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(jLabel4)))
@@ -128,10 +121,9 @@ public class AddSuite extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(close)
                     .addComponent(number)
-                    .addComponent(Sname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                     .addComponent(Sprice, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Stype, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(no, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(no, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sType, 0, 71, Short.MAX_VALUE))
                 .addGap(55, 55, 55))
             .addGroup(layout.createSequentialGroup()
                 .addGap(78, 78, 78)
@@ -143,11 +135,7 @@ public class AddSuite extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name)
-                    .addComponent(Sname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -158,7 +146,7 @@ public class AddSuite extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(Stype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -211,9 +199,7 @@ public class AddSuite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Sname;
     private javax.swing.JTextField Sprice;
-    private javax.swing.JTextField Stype;
     private javax.swing.JButton close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -221,9 +207,9 @@ public class AddSuite extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel name;
     private javax.swing.JComboBox no;
     private javax.swing.JTextField number;
+    private javax.swing.JComboBox sType;
     private javax.swing.JButton save;
     // End of variables declaration//GEN-END:variables
 }

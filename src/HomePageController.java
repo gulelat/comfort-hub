@@ -29,9 +29,13 @@ public class HomePageController {
     ListHotEmp listEmployee = new ListHotEmp();
     ModHotEmp modifyEmployee = new ModHotEmp();
     DeleteHotEmp deleteEmployee= new DeleteHotEmp();
+    Billings  addBill = new Billings();
+    PrintBill printing = new PrintBill();
     
     
-    
+    /**
+     * constructor that creates a new homepage
+     */
     
     public HomePageController(){
         home = new HomePage();
@@ -48,6 +52,11 @@ public class HomePageController {
                       ControllerAddHotEmp add= new ControllerAddHotEmp();
                          add.control();
                   }
+                  if(actionEvent.getSource()==home.gETBILL()){
+                      ControllerBillings b= new ControllerBillings();
+                        b.control(); 
+                  }
+                                    
                   if(actionEvent.getSource()==home.getMODIFYEMP()){
                       ControllerModEmp c= new ControllerModEmp();
                         c.control(); 
@@ -106,6 +115,14 @@ public class HomePageController {
                   if(actionEvent.getSource()==home.getLISTEMPMENU()){
                       ControllerListHotEmp cE= new ControllerListHotEmp();
                         cE.contol();
+                  }
+                  if(actionEvent.getSource()==home.getBILLMENU()){
+                      ControllerBillings tb= new ControllerBillings();
+                        tb.control();
+                  }
+                   if(actionEvent.getSource()==home.getPRINT()){
+                      ControllerPrintBill tb= new ControllerPrintBill();
+                        tb.control();
                   }
                   if(actionEvent.getSource()==home.getADDROOMMENU()){  
                       ControllerAddSuite c= new ControllerAddSuite();
@@ -174,12 +191,14 @@ public class HomePageController {
         home.getMODIFYRES().addActionListener(actionListener);
         home.getDELETERES().addActionListener(actionListener);
         home.getLISTALL().addActionListener(actionListener);
+        home.gETBILL().addActionListener(actionListener);
        
    
         /**
          * MenuItems action listener
          */
         home.getADDING().addActionListener(actionListener);
+        home.getBILLMENU().addActionListener(actionListener);
         home.getEDITEMPMENU().addActionListener(actionListener);
         home.getDELETEEMPMENU().addActionListener(actionListener);
         home.getLISTEMPMENU().addActionListener(actionListener);
@@ -193,6 +212,7 @@ public class HomePageController {
         home.getLISTRES().addActionListener(actionListener);
         home.getEXPORT().addActionListener(actionListener);
         home.getSEARCH().addActionListener(actionListener);
+        home.getPRINT().addActionListener(actionListener);
         
         }
    

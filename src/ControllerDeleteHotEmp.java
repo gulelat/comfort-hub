@@ -16,20 +16,26 @@ import javax.swing.JOptionPane;
  * @author Dorothy
  */
 public class ControllerDeleteHotEmp {
-  
+  /**
+   * declaring variables in class
+   */
     Connection conn=null;
     String querry;
      Statement st=null;
     public DeleteHotEmp deleteEmp;
     private ActionListener actionListener;
     
-    
+    /**
+     * constructor for the class
+     */
     public ControllerDeleteHotEmp( ){
         deleteEmp = new DeleteHotEmp();
         deleteEmp.setVisible(true);
                           
     }
-    
+    /**
+     * method to delete employee
+     */
      public void deleteOrder(){
         try{
         Class.forName("com.mysql.jdbc.Driver");
@@ -48,7 +54,9 @@ public class ControllerDeleteHotEmp {
          JOptionPane.showMessageDialog(null,e);
         }
     }
-    
+    /**
+     * method to control action listener for events
+     */
    public void contol(){        
         actionListener = new ActionListener() {
               public void actionPerformed(ActionEvent actionEvent) {  

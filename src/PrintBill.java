@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import javax.swing.JButton;
+
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -12,23 +13,24 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Dorothy
  */
-public class ListSuites extends javax.swing.JFrame {
- /**
-     * An array of string to store Flight Name, From, Destination, Price, 
-     * Capacity, Departure Time, Arrival Time"
-     */
-    String[] columns = {" Number","Type", "Price per Day","Availability"};
-    DefaultTableModel table= new DefaultTableModel(columns,0);
-    
-    
+public class PrintBill extends javax.swing.JFrame {
+
     /**
-     * Creates new form ListSuites
+     * Creates new form PrintBill
      */
-    public ListSuites() {
-        getContentPane().setBackground(Color.BLACK);
+    public PrintBill() {
         initComponents();
     }
     
+    /**
+     * An array of string to store Flight Name, From, Destination, Price, 
+     * Capacity, Departure Time, Arrival Time"
+     */
+    String[] columns = {" name","price per day", "numofdays","payment mode", "total"};
+    DefaultTableModel table= new DefaultTableModel(columns,0);
+    
+    
+      
      /**
      * 
      * @return table, list & close
@@ -41,6 +43,9 @@ public class ListSuites extends javax.swing.JFrame {
          }
     public JButton getCloseButton(){
          return close;
+         }
+     public JButton getPrintButton(){
+         return print;
          }
 
     /**
@@ -55,44 +60,48 @@ public class ListSuites extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         list = new javax.swing.JButton();
+        print = new javax.swing.JButton();
         close = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setBackground(new java.awt.Color(153, 102, 0));
         jTable1.setModel(table);
         jScrollPane1.setViewportView(jTable1);
 
         list.setText("LIST");
 
-        close.setText("CLOSE");
+        print.setText("PRINT");
+
+        close.setText("EXIT");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(list, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(close, javax.swing.GroupLayout.Alignment.TRAILING))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(list)
+                .addGap(67, 67, 67)
+                .addComponent(print)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(close)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(list)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(close)
-                        .addGap(20, 20, 20))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(list)
+                    .addComponent(print)
+                    .addComponent(close))
+                .addGap(38, 38, 38))
         );
 
         pack();
@@ -115,20 +124,20 @@ public class ListSuites extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListSuites.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintBill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListSuites.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintBill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListSuites.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintBill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListSuites.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintBill.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListSuites().setVisible(true);
+                new PrintBill().setVisible(true);
             }
         });
     }
@@ -138,5 +147,6 @@ public class ListSuites extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton list;
+    private javax.swing.JButton print;
     // End of variables declaration//GEN-END:variables
 }

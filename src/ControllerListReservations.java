@@ -25,7 +25,6 @@ public class ControllerListReservations {
     String deleteStudent;
     String showStudent;
     Statement st=null;
-    //public DeleteOrder deleteOrder;
     public ListReservations listOrder;
     private ActionListener actionListener;
     

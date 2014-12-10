@@ -23,6 +23,7 @@ public class ControllerModifyRes {
      */
     Connection connection=null;
     String deleteStudent;
+    String type="";
     String query;
     Statement stmt=null;
     public ModifyRes modifyOrder;
@@ -35,6 +36,9 @@ public class ControllerModifyRes {
     public ControllerModifyRes(){
         modifyOrder = new ModifyRes();
         modifyOrder.setVisible(true);
+    }
+    public String getSType(){
+        return type;
     }
     
     /**
@@ -59,7 +63,7 @@ public class ControllerModifyRes {
                 modifyOrder.getRNum().setText(rs.getString("roomNO"));
                 modifyOrder.getNationality().setText(rs.getString("nationality"));
                 modifyOrder.getPNum().setText(rs.getString("phoneNo"));
-                modifyOrder.getRoomType().setText(rs.getString("roomType"));
+                modifyOrder.getRoomType().setSelectedItem(rs.getString("roomType"));
                 modifyOrder.getPriceField().setText(rs.getString("price"));           
                 modifyOrder.getTIMEIN().setText(rs.getString("TimeIn"));
                 modifyOrder.getTIMEOUT().setText(rs.getString("TimeOut")); 
@@ -91,12 +95,12 @@ public class ControllerModifyRes {
         PreparedStatement st=connection.prepareStatement(query);
         st.execute("USE comfort_hub;");
 
-  // st.setString(1, modifyOrder.getSearch().getText());
+  
    st.setString(1, modifyOrder.getNameField().getText());
    st.setString(2, modifyOrder.getRNum().getText());
    st.setString(3, modifyOrder.getNationality().getText());
    st.setString(4, modifyOrder.getPNum().getText());
-   st.setString(5, modifyOrder.getRoomType().getText());
+   st.setString(5, (modifyOrder.getRoomType().getSelectedItem()).toString());
    st.setString(6, modifyOrder.getPriceField().getText());
    st.setString(7, modifyOrder.getTIMEIN().getText());
    st.setString(8, modifyOrder.getTIMEOUT().getText());
@@ -127,6 +131,9 @@ public class ControllerModifyRes {
                     modifyOrder.setVisible(false);
                 }
                 if(actionEvent.getSource()==modifyOrder.getSearchButton()){
+                  showAllDetails();  
+                }
+                if(actionEvent.getSource()==modifyOrder.getRoomType()){
                   showAllDetails();  
                 }
             }

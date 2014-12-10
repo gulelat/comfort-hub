@@ -40,7 +40,7 @@ public class DisplayList extends javax.swing.JFrame {
     
     /**
      * 
-     * @return list_button
+     * @return list
      */
     public JButton getListButton(){
         return list;
@@ -48,7 +48,7 @@ public class DisplayList extends javax.swing.JFrame {
     
     /**
      * 
-     * @return close_button
+     * @return close
      */
     public JButton getCloseButton(){
         return close;
@@ -70,6 +70,7 @@ public class DisplayList extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jList1.setBackground(new java.awt.Color(102, 51, 0));
         jList1.setModel(listModel);
         jScrollPane1.setViewportView(jList1);
 

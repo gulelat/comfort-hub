@@ -32,10 +32,8 @@ public class ControllerAddHotEmp {
      * constructor to instantiate declared objects
      */
     public ControllerAddHotEmp( ){
-       // this.deleteOrder = delete;
         enterEmp = new Hotel_Employee();
-        enterEmp.setVisible(true);
-                          
+        enterEmp.setVisible(true);                 
     }
     
     /**
